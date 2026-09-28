@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { OpeningHours } from "@/components/opening-hours";
-import { formattedAddress, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Furniture Studio Miami",
@@ -48,11 +47,7 @@ export default function StudioPage() {
           <div data-reveal>
             <p className="eyebrow">MIAMI, FLORIDA</p>
             <h2>Come spend time<br /><em>with the collection.</em></h2>
-            <div className="visit-address">
-              <MapPin size={20} strokeWidth={1.4} />
-              <address>{formattedAddress}<br />USA</address>
-            </div>
-            <a className="button light" href={siteConfig.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={17} /></a>
+            <p className="visit-location">Miami, Florida<br />Appointments by request.</p>
           </div>
           <div className="visit-hours" data-reveal>
             <p className="eyebrow">OPENING HOURS</p>

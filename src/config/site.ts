@@ -5,14 +5,6 @@ export const siteConfig = {
   description:
     "A Miami-based furniture studio curating sculptural indoor and outdoor pieces, warm materials, and relaxed rooms with a collected point of view.",
   url: "https://franze-co.com",
-  address: {
-    street: "",
-    city: "Miami",
-    region: "FL",
-    postalCode: "",
-    country: "USA",
-    countryCode: "US",
-  },
   phone: null as string | null,
   email: null as string | null,
   whatsapp: null as string | null,
@@ -30,8 +22,4 @@ export const siteConfig = {
     facebook: null as string | null,
     pinterest: null as string | null,
   },
-  directionsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Miami+Design+District",
 } as const;
-
-export const formattedAddress = `${siteConfig.address.city}, ${siteConfig.address.region}`;

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { OpeningHours } from "@/components/opening-hours";
-import { formattedAddress, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Visit Franze & Co. Miami",
@@ -29,10 +29,8 @@ export default function ContactPage() {
         <div className="contact-visit-image"><Image src="/editorial/lounge-wide.jpg" alt="Contemporary lounge interior" fill sizes="(max-width: 800px) 100vw, 55vw" /></div>
         <div className="contact-visit-details" data-reveal>
           <div className="contact-address">
-            <MapPin size={21} strokeWidth={1.4} />
-            <div><p className="eyebrow">FRANZE & CO. LLC</p><address>{formattedAddress}<br />USA</address></div>
+            <div><p className="eyebrow">FRANZE & CO. LLC</p><p className="contact-location-note">Miami, Florida<br />Appointments by request.</p></div>
           </div>
-          <a className="button dark" href={siteConfig.directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps <ArrowUpRight size={17} /></a>
           <div className="contact-hours"><p className="eyebrow">OPENING HOURS</p><OpeningHours /></div>
           {siteConfig.phone && <a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a>}
           {siteConfig.email && <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>}
