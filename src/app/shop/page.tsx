@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CollectionNav } from "@/components/collection-nav";
 import { ShopCatalog } from "@/components/shop-catalog";
 import { products, toCatalogProduct } from "@/data/products";
@@ -18,10 +19,14 @@ export const metadata: Metadata = {
 export default function ShopPage() {
   return (
     <>
-      <header className="shop-hero shell" data-reveal>
-        <p className="eyebrow">INVENTORY / {products.length} PIECES</p>
-        <h1>The Franze<br /><em>inventory.</em></h1>
-        <p>Furniture selected for rooms with daylight, dinner plans, and a point of view.</p>
+      <header className="shop-hero" data-reveal>
+        <Image src="/editorial/warm-living.jpg" alt="Warm contemporary living room" fill priority sizes="100vw" />
+        <div className="shop-hero-shade" />
+        <div className="shop-hero-content shell">
+          <p className="eyebrow">THE COLLECTION / {products.length} PIECES</p>
+          <h1>Furniture with<br />a sense of place.</h1>
+          <p>Designed for the pace, light, and texture of a Miami home.</p>
+        </div>
       </header>
       <CollectionNav />
       <ShopCatalog initialProducts={products.map(toCatalogProduct)} />

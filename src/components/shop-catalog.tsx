@@ -65,7 +65,7 @@ export function ShopCatalog({
             <SlidersHorizontal size={16} /> Filters <span>{filtersOpen ? "-" : "+"}</span>
           </button>
           <label className="select-label">
-            <span>Sort</span>
+            <span>Sort by</span>
             <select value={sort} onChange={(event) => setSort(event.target.value as Sort)}>
               <option value="featured">Featured</option>
               <option value="price-asc">Price: Low to high</option>
