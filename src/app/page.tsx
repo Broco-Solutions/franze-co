@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { featuredProducts } from "@/data/products";
 
 const rooms = [
@@ -13,10 +13,11 @@ const rooms = [
 export default function Home() {
   return <>
     <section className="fc-hero">
-      <div className="fc-hero-stamp" aria-hidden="true">FC<br />MIAMI</div>
-      <div className="fc-hero-intro"><p>Furniture for the sunlit, unprecious home.</p><Link href="/shop" className="fc-round-link">Shop<br />the edit <ArrowDownRight size={21} /></Link></div>
-      <div className="fc-hero-photo"><Image src="/editorial/blue-room.jpg" alt="A sculptural blue living room" fill priority sizes="100vw" /></div>
-      <div className="fc-hero-title"><span>FRANZE</span><span>&amp; CO.</span></div><p className="fc-hero-caption">Miami / indoor + outdoor / made for living</p>
+      <div className="fc-hero-photo"><Image src="/editorial/franze-hero-v2.webp" alt="Warm contemporary Miami living room with sculptural furniture" fill priority sizes="100vw" /></div>
+      <div className="fc-hero-frame" aria-hidden="true" />
+      <div className="fc-hero-wordmark" aria-hidden="true">FRANZE &amp; CO.</div>
+      <div className="fc-hero-note"><span>01 / THE MIAMI EDIT</span><span>INDOOR + OUTDOOR</span></div>
+      <div className="fc-hero-card"><p className="fc-label">FURNITURE FOR ROOMS WITH A POINT OF VIEW</p><h1>Quiet luxury, lived in.</h1><p>Collected pieces for soft light, long tables, and homes that feel entirely your own.</p><Link href="/shop">Explore the edit <ArrowRight size={17} /></Link></div>
     </section>
     <section className="fc-manifest"><p className="fc-label">A LOCAL EDIT, NOT A LOOKBOOK</p><h1>Good rooms happen when the useful things are also the memorable ones.</h1><div><p>Franze & Co. brings expressive, practical furniture into focus for homes shaped by Florida light. We source pieces for real routines: morning coffee, friends staying late, a terrace that gets used.</p><Link href="/about">Our approach <ArrowUpRight size={16} /></Link></div></section>
     <section className="fc-room-index" aria-label="Shop by room"><div className="fc-index-head"><span>SHOP THE HOUSE</span><span>FOUR WAYS IN</span></div><div className="fc-room-grid">{rooms.map((room) => <Link href={room.href} className="fc-room" key={room.name}><div className="fc-room-image"><Image src={room.image} alt={`${room.name} furniture scene`} fill sizes="(max-width: 720px) 100vw, 50vw" /></div><div className="fc-room-copy"><span>{room.number}</span><h2>{room.name}</h2><p>{room.note}</p><ArrowUpRight size={19} /></div></Link>)}</div></section>

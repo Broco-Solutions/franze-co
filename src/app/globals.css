@@ -658,7 +658,7 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 /* Franze & Co. 2026: graphic Miami supply-house system */
 .fc-ticker { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 6px 24px; background: linear-gradient(90deg, rgba(32,27,23,.74), rgba(32,27,23,.38)), url("/editorial/warm-living.jpg") center 53% / cover; color: var(--white); font-family: var(--font-display), monospace; font-size: 10px; letter-spacing: .04em; }
 .fc-ticker a { border-bottom: 1px solid rgba(255,255,255,.65); }
-.fc-header { height: 70px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; padding: 0 24px; border-bottom: 1px solid var(--ink); background: var(--paper); }
+.fc-header { position: sticky; z-index: 50; top: 0; height: 64px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; padding: 0 24px; border-bottom: 1px solid var(--line); background: rgba(250,248,244,.96); box-shadow: 0 5px 18px rgba(42,38,34,.04); backdrop-filter: blur(12px); }
 .fc-logo { font-family: var(--font-sans), Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -.09em; line-height: .8; }
 .fc-logo span { margin-inline: 3px; color: var(--wood); font-family: var(--font-display), monospace; }
 .fc-header nav { display: flex; align-items: center; gap: 26px; }
@@ -672,18 +672,18 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 .fc-mobile-menu button { justify-self: end; padding: 0; border: 0; background: transparent; color: inherit; }
 .fc-mobile-menu p { margin: 40px 0 35px; color: var(--wood); font-family: var(--font-display), monospace; font-size: 12px; }
 .fc-mobile-menu a { font-size: 44px; font-weight: 600; letter-spacing: -.07em; line-height: .9; }
-.fc-hero { position: relative; min-height: calc(100svh - 101px); overflow: hidden; background: var(--ink); color: var(--paper); }
-.fc-hero-photo { position: absolute; z-index: 0; inset: 0 0 0 28%; }
-.fc-hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(41,38,35,.84) 0%, rgba(41,38,35,.2) 60%, rgba(41,38,35,.12)); }
+.fc-hero { position: relative; min-height: min(820px, calc(100svh - 102px)); overflow: hidden; background: var(--ink); color: var(--paper); }
+.fc-hero-photo { position: absolute; z-index: 0; inset: 0; }
+.fc-hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30,27,24,.36), transparent 52%), linear-gradient(0deg, rgba(30,27,24,.34), transparent 42%); }
 .fc-hero-photo img, .fc-room-image img, .fc-spotlight-photo img { object-fit: cover; }
-.fc-hero-title { position: absolute; z-index: 1; top: 12%; left: 4vw; display: flex; flex-direction: column; font-size: clamp(65px, 12.8vw, 215px); font-weight: 600; letter-spacing: -.115em; line-height: .72; }
-.fc-hero-title span:last-child { align-self: flex-end; margin-top: .2em; color: var(--sun); }
-.fc-hero-intro { position: absolute; z-index: 2; bottom: 35px; left: 4vw; max-width: 250px; }
-.fc-hero-intro p { font-size: 15px; font-weight: 500; line-height: 1.25; }
-.fc-round-link { width: 110px; height: 110px; display: grid; align-content: center; justify-items: center; gap: 7px; margin-top: 22px; border-radius: 50%; background: var(--wood); color: var(--ink); font-family: var(--font-display), monospace; font-size: 11px; line-height: 1.1; text-transform: uppercase; transition: transform .25s; }
-.fc-round-link:hover { transform: rotate(-10deg) scale(1.06); }
-.fc-hero-stamp { position: absolute; z-index: 2; top: 28px; right: 30px; padding: 9px; border: 1px solid var(--paper); color: var(--paper); font-family: var(--font-display), monospace; font-size: 10px; line-height: 1.1; text-align: right; }
-.fc-hero-caption { position: absolute; z-index: 2; right: 30px; bottom: 26px; margin: 0; font-family: var(--font-display), monospace; font-size: 10px; text-transform: uppercase; writing-mode: vertical-rl; }
+.fc-hero-frame { position: absolute; z-index: 1; inset: 18px; border: 1px solid rgba(250,248,244,.52); pointer-events: none; }
+.fc-hero-wordmark { position: absolute; z-index: 2; top: 44px; left: 4vw; color: var(--paper); font-family: var(--font-display), monospace; font-size: 11px; letter-spacing: .16em; }
+.fc-hero-note { position: absolute; z-index: 2; top: 44px; right: 4vw; display: flex; gap: 20px; color: var(--paper); font-family: var(--font-display), monospace; font-size: 10px; letter-spacing: .06em; }
+.fc-hero-card { position: absolute; z-index: 2; bottom: 45px; left: 4vw; width: min(430px, calc(100% - 72px)); padding: 28px 30px 26px; background: rgba(241,236,228,.95); color: var(--ink); }
+.fc-hero-card .fc-label { margin-bottom: 18px; color: var(--wood); }
+.fc-hero-card h1 { margin: 0 0 14px; font-size: clamp(35px, 4vw, 58px); line-height: .92; }
+.fc-hero-card > p:not(.fc-label) { margin-bottom: 20px; font-size: 13px; line-height: 1.48; }
+.fc-hero-card a { display: inline-flex; align-items: center; gap: 9px; border-bottom: 1px solid; padding-bottom: 5px; font-family: var(--font-display), monospace; font-size: 10px; text-transform: uppercase; }
 .fc-manifest { display: grid; grid-template-columns: .65fr 1.65fr .7fr; gap: 46px; padding: 120px 5vw; background: var(--sun); color: var(--ink); }
 .fc-label, .fc-index-head { margin: 0; font-family: var(--font-display), monospace; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
 .fc-manifest h1 { max-width: 840px; margin: 0; font-size: clamp(42px, 5.2vw, 84px); }
@@ -746,3 +746,18 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 .collection-index-row { background: var(--paper); }
 .collection-index-copy h2 { font-family: var(--font-sans), Arial, sans-serif; letter-spacing: -.08em; }
 @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Final premium polish: compact sticky navigation, a calmer hero and readable footer. */
+.footer-lead .eyebrow { color: var(--sun); }
+.footer-grid h3, .footer-grid a, .footer-grid address, .footer-grid p { color: rgba(250,248,244,.78); }
+@media (max-width: 600px) {
+  .fc-ticker { min-height: 30px; padding-inline: 13px; font-size: 8px; }
+  .fc-header { height: 58px; padding-inline: 14px; gap: 10px; }
+  .fc-hero { min-height: 620px; }
+  .fc-hero-frame { inset: 10px; }
+  .fc-hero-wordmark { top: 27px; left: 24px; font-size: 9px; }
+  .fc-hero-note { top: 27px; right: 24px; display: block; text-align: right; font-size: 8px; }
+  .fc-hero-note span { display: block; margin-bottom: 5px; }
+  .fc-hero-card { bottom: 26px; left: 20px; width: calc(100% - 40px); padding: 22px; }
+  .fc-hero-card h1 { font-size: 38px; }
+}
