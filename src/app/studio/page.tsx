@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Furniture Studio Miami",
     description: "Visit Franze & Co., a Miami furniture studio for sculptural indoor and outdoor pieces.",
     url: "/studio",
-    images: ["/products/brunello-sectional-sofa-brown-velvet/02.webp"],
+    images: ["/editorial/green-salon.jpg"],
   },
 };
 
@@ -21,7 +21,7 @@ export default function StudioPage() {
   return (
     <>
       <section className="studio-hero">
-        <Image src="/products/brunello-sectional-sofa-brown-velvet/02.webp" alt="Contemporary living setting in warm brown velvet and marble" fill priority sizes="100vw" />
+        <Image src="/editorial/green-salon.jpg" alt="Colorful contemporary living setting" fill priority sizes="100vw" />
         <div className="hero-shade" />
         <div className="studio-hero-copy shell">
           <p className="eyebrow light-text">OUR STUDIO / MIAMI</p>
@@ -38,8 +38,8 @@ export default function StudioPage() {
       </section>
 
       <section className="studio-collage shell">
-        <div className="studio-collage-main" data-reveal><Image src="/products/forma-sectional-sofa-off-white/02.webp" alt="Forma sectional living room setting" fill sizes="(max-width: 800px) 100vw, 62vw" /></div>
-        <div className="studio-collage-side" data-reveal><Image src="/products/oxford-bed-greige-oak/02.webp" alt="Oxford greige oak bedroom setting" fill sizes="(max-width: 800px) 100vw, 38vw" /></div>
+        <div className="studio-collage-main" data-reveal><Image src="/editorial/warm-living.jpg" alt="Warm living room setting" fill sizes="(max-width: 800px) 100vw, 62vw" /></div>
+        <div className="studio-collage-side" data-reveal><Image src="/editorial/bath-stone.jpg" alt="Calm stone interior" fill sizes="(max-width: 800px) 100vw, 38vw" /></div>
         <p className="studio-collage-note">Explore scale, upholstery, finish, and proportion in person.</p>
       </section>
 

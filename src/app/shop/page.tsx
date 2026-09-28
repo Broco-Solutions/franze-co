@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Shop Furniture Miami",
     description: "Browse 24 contemporary living, dining, bedroom, and outdoor furniture pieces curated by Franze & Co. in Miami.",
     url: "/shop",
-    images: ["/products/forma-sectional-sofa-off-white/02.webp"],
+    images: ["/editorial/green-salon.jpg"],
   },
 };
 
@@ -19,9 +19,9 @@ export default function ShopPage() {
   return (
     <>
       <header className="shop-hero shell" data-reveal>
-        <p className="eyebrow">THE COMPLETE EDIT / {products.length} PIECES</p>
-        <h1>Furniture for a<br /><em>considered home.</em></h1>
-        <p>Soft forms, warm materials, and architectural contrast, selected to move naturally from room to room.</p>
+        <p className="eyebrow">INVENTORY / {products.length} PIECES</p>
+        <h1>The Franze<br /><em>inventory.</em></h1>
+        <p>Furniture selected for rooms with daylight, dinner plans, and a point of view.</p>
       </header>
       <CollectionNav />
       <ShopCatalog initialProducts={products.map(toCatalogProduct)} />

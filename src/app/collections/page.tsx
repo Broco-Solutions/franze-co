@@ -12,24 +12,24 @@ export const metadata: Metadata = {
     title: "Furniture Collections",
     description: "Explore Franze & Co. furniture collections for contemporary living, dining, bedroom, and outdoor spaces in Miami.",
     url: "/collections",
-    images: ["/products/brunello-sectional-sofa-brown-velvet/02.webp"],
+    images: ["/editorial/blue-room.jpg"],
   },
 };
 
 const media = {
-  Living: "/products/brunello-sectional-sofa-brown-velvet/02.webp",
-  Dining: "/products/oxford-rectangular-dining-table-greige-oak/02.webp",
-  Bedroom: "/products/baxter-bed-alabaster-w-beige-velvet-headboard/02.webp",
-  Outdoor: "/products/vita-outdoor-lounge-chair/02.webp",
+  Living: "/editorial/green-salon.jpg",
+  Dining: "/editorial/dining-warm.jpg",
+  Bedroom: "/editorial/lounge-wide.jpg",
+  Outdoor: "/editorial/miami-living.jpg",
 };
 
 export default function CollectionsPage() {
   return (
     <>
       <header className="collections-index-hero shell" data-reveal>
-        <p className="eyebrow">ROOM BY ROOM</p>
-        <h1>Four collections.<br /><em>One point of view.</em></h1>
-        <p>A focused edit of design-led furniture, designed to move naturally from indoors to out.</p>
+        <p className="eyebrow">THE HOUSE, INDEXED</p>
+        <h1>Start with<br /><em>the moment.</em></h1>
+        <p>Four focused edits for how a room is actually used, from first coffee to the last guest leaving.</p>
       </header>
       <section className="collection-index">
         {categories.map((category, index) => (

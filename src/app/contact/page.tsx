@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Visit Franze & Co. Miami",
     description: "Plan a visit to Franze & Co. in Miami and explore design-led furniture in person.",
     url: "/contact",
-    images: ["/products/nido-lounge-chair-white/02.webp"],
+    images: ["/editorial/lounge-wide.jpg"],
   },
 };
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
         <p>See the collection in person in Miami, compare finishes, and understand each piece at room scale.</p>
       </header>
       <section className="contact-visit">
-        <div className="contact-visit-image"><Image src="/products/nido-lounge-chair-white/02.webp" alt="Nido lounge chair in a contemporary interior" fill sizes="(max-width: 800px) 100vw, 55vw" /></div>
+        <div className="contact-visit-image"><Image src="/editorial/lounge-wide.jpg" alt="Contemporary lounge interior" fill sizes="(max-width: 800px) 100vw, 55vw" /></div>
         <div className="contact-visit-details" data-reveal>
           <div className="contact-address">
             <MapPin size={21} strokeWidth={1.4} />
