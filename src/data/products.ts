@@ -32,13 +32,24 @@ export type CatalogProduct = Omit<
 
 type ProductInput = Omit<Product, "id" | "images" | "currency" | "sourceName" | "sourceUrl" | "dateCaptured">;
 
+const editorialImageSets = [
+  ["/editorial/green-salon.jpg", "/editorial/warm-living.jpg"],
+  ["/editorial/miami-living.jpg", "/editorial/lounge-wide.jpg"],
+  ["/editorial/dining-warm.jpg", "/editorial/kitchen-dining.jpg"],
+  ["/editorial/blue-room.jpg", "/editorial/warm-living.jpg"],
+  ["/editorial/kitchen-dining.jpg", "/editorial/dining-warm.jpg"],
+  ["/editorial/lounge-wide.jpg", "/editorial/green-salon.jpg"],
+  ["/editorial/warm-living.jpg", "/editorial/blue-room.jpg"],
+  ["/editorial/bath-stone.jpg", "/editorial/miami-living.jpg"],
+] as const;
+
+let productIndex = 0;
+
 const product = (data: ProductInput): Product => ({
   ...data,
   id: data.slug,
   currency: "USD",
-  images: data.imageSourceUrls.map(
-    (_, index) => `/products/${data.slug}/${String(index + 1).padStart(2, "0")}.webp`,
-  ),
+  images: [...editorialImageSets[productIndex++ % editorialImageSets.length]],
   sourceName: "Franze & Co. Market Research",
   sourceUrl: `https://modani.com/products/${data.slug}`,
   dateCaptured: "2026-09-10",
