@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, MapPin } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/product-card";
 import { ProductGallery } from "@/components/product-gallery";
@@ -71,10 +71,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
           <p className="product-lede">{product.shortDescription}</p>
           <p className="product-description">{product.description}</p>
-
-          <div className="product-actions">
-            <Link className="button dark full-button" href="/studio"><MapPin size={17} /> Visit our Miami studio</Link>
-          </div>
 
           <dl className="spec-list">
             <div><dt>Finish</dt><dd><span className="finish-dot" />{product.colors.join(" / ")}</dd></div>

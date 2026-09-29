@@ -26,7 +26,6 @@ export function ProductCard({ product, priority = false }: { product: CatalogPro
             sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw"
           />
         )}
-        {onSale && <span className="sale-label">FRANZE EDIT</span>}
         <span className="product-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
       </Link>
       <div className="product-meta">
