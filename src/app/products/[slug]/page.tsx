@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/product-card";
 import { ProductGallery } from "@/components/product-gallery";
 import { siteConfig } from "@/config/site";
-import { formatPrice, getProductBySlug, getProductsByCategory, products, toCatalogProduct } from "@/data/products";
+import { formatPrice, getProductBySlug, getProductsByCategory, getProductsBySubcategory, products, toCatalogProduct } from "@/data/products";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -33,7 +33,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) notFound();
-  const related = getProductsByCategory(product.category).filter((item) => item.id !== product.id).slice(0, 3);
+  const similar = getProductsBySubcategory(product.subcategory).filter((item) => item.id !== product.id).slice(0, 3);
+  const complements = getProductsByCategory(product.category)
+    .filter((item) => item.id !== product.id && item.subcategory !== product.subcategory)
+    .slice(0, 3);
   const onSale = product.compareAtPrice !== null && product.compareAtPrice > product.price;
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -58,6 +61,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <Link href="/">Home</Link><ChevronRight size={12} />
         <Link href="/shop">Shop</Link><ChevronRight size={12} />
         <Link href={`/collections/${product.category.toLowerCase()}`}>{product.category}</Link><ChevronRight size={12} />
+        <Link href={`/collections/${product.category.toLowerCase()}?type=${encodeURIComponent(product.subcategory)}#catalog`}>{product.subcategory}</Link><ChevronRight size={12} />
         <span aria-current="page">{product.name}</span>
       </nav>
       <section className="product-detail shell">
@@ -84,10 +88,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <section className="related">
         <div className="shell">
           <div className="section-heading">
-            <div><p className="eyebrow">CONTINUE THE ROOM</p><h2>Related pieces.</h2></div>
-            <Link className="text-link" href={`/collections/${product.category.toLowerCase()}`}>View {product.category.toLowerCase()} <ArrowRight size={16} /></Link>
+            <div><p className="eyebrow">MORE LIKE THIS</p><h2>Similar {product.subcategory.toLowerCase()}.</h2></div>
+            <Link className="text-link" href={`/collections/${product.category.toLowerCase()}?type=${encodeURIComponent(product.subcategory)}#catalog`}>View this type <ArrowRight size={16} /></Link>
           </div>
-          <div className="product-grid">{related.map((item) => <ProductCard product={toCatalogProduct(item)} key={item.id} />)}</div>
+          {similar.length ? <div className="product-grid">{similar.map((item) => <ProductCard product={toCatalogProduct(item)} key={item.id} />)}</div> : <p className="related-note">Explore more pieces from the {product.category.toLowerCase()} collection.</p>}
+          {complements.length > 0 && <div className="complete-room">
+            <div className="section-heading"><div><p className="eyebrow">COMPLETE THE ROOM</p><h2>Consider these together.</h2></div></div>
+            <div className="product-grid">{complements.map((item) => <ProductCard product={toCatalogProduct(item)} key={item.id} />)}</div>
+          </div>}
         </div>
       </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd).replace(/</g, "\\u003c") }} />

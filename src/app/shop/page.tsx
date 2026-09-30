@@ -6,11 +6,11 @@ import { products, toCatalogProduct } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Shop Furniture Miami",
-  description: "Browse 24 contemporary living, dining, bedroom, and outdoor furniture pieces curated by Franze & Co. in Miami.",
+  description: "Browse contemporary living, dining, bedroom, and outdoor furniture by room and product type at Franze & Co. in Miami.",
   alternates: { canonical: "/shop" },
   openGraph: {
     title: "Shop Furniture Miami",
-    description: "Browse 24 contemporary living, dining, bedroom, and outdoor furniture pieces curated by Franze & Co. in Miami.",
+    description: "Browse contemporary living, dining, bedroom, and outdoor furniture by room and product type at Franze & Co. in Miami.",
     url: "/shop",
     images: ["/editorial/green-salon.jpg"],
   },

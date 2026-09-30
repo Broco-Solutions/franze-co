@@ -21,7 +21,7 @@ export function ProductCard({ product, priority = false }: { product: CatalogPro
           <Image
             className="product-image-secondary"
             src={product.images[1]}
-            alt={`${product.name} styled view`}
+            alt={`${product.name}, alternate view`}
             fill
             sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw"
           />

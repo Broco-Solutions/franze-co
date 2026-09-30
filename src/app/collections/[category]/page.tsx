@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollectionNav } from "@/components/collection-nav";
 import { ShopCatalog } from "@/components/shop-catalog";
@@ -48,12 +49,15 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   };
 }
 
-export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+export default async function CategoryPage({ params, searchParams }: { params: Promise<{ category: string }>; searchParams: Promise<{ type?: string }> }) {
   const { category: slug } = await params;
   const category = getCategory(slug);
   if (!category) notFound();
   const categoryProducts = getProductsByCategory(category);
   const details = content[category];
+  const { type } = await searchParams;
+  const subcategories = [...new Set(categoryProducts.map((product) => product.subcategory))];
+  const selectedType = type && subcategories.includes(type) ? type : undefined;
 
   return (
     <>
@@ -62,13 +66,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           <p className="eyebrow">{category.toUpperCase()} / {categoryProducts.length} PIECES</p>
           <h1>{details.title.split("\n").map((line, index) => <span key={line}>{index === 1 ? <em>{line}</em> : line}</span>)}</h1>
           <p>{details.description}</p>
+          <nav className="category-types" aria-label={`Browse ${category} by type`}>
+            {subcategories.map((subcategory) => <Link href={`/collections/${slug}?type=${encodeURIComponent(subcategory)}#catalog`} key={subcategory}>{subcategory}</Link>)}
+          </nav>
         </div>
         <div className="collection-hero-image">
           <Image src={details.image} alt={`${category} collection setting`} fill priority sizes="(max-width: 780px) 100vw, 50vw" />
         </div>
       </header>
       <CollectionNav active={category} />
-      <ShopCatalog initialProducts={categoryProducts.map(toCatalogProduct)} initialCategory={category} />
+      <div id="catalog"><ShopCatalog initialProducts={categoryProducts.map(toCatalogProduct)} initialCategory={category} initialSubcategory={selectedType} /></div>
     </>
   );
 }

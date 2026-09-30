@@ -10,12 +10,14 @@ type Sort = "featured" | "price-asc" | "price-desc" | "name";
 export function ShopCatalog({
   initialProducts,
   initialCategory,
+  initialSubcategory,
 }: {
   initialProducts: CatalogProduct[];
   initialCategory?: Category;
+  initialSubcategory?: string;
 }) {
   const [category, setCategory] = useState<Category | "All">(initialCategory ?? "All");
-  const [subcategory, setSubcategory] = useState("All");
+  const [subcategory, setSubcategory] = useState(initialSubcategory ?? "All");
   const [query, setQuery] = useState("");
   const [price, setPrice] = useState("all");
   const [sort, setSort] = useState<Sort>("featured");
@@ -45,7 +47,7 @@ export function ShopCatalog({
 
   const reset = () => {
     setCategory(initialCategory ?? "All");
-    setSubcategory("All");
+    setSubcategory(initialSubcategory ?? "All");
     setQuery("");
     setPrice("all");
     setSort("featured");

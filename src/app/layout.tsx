@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Mono, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import { Footer } from "@/components/footer";
 import type { SearchProduct } from "@/components/global-search";
 import { Header } from "@/components/header";
@@ -9,8 +9,8 @@ import { siteConfig } from "@/config/site";
 import { products } from "@/data/products";
 import "./globals.css";
 
-const sans = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const mono = DM_Mono({ subsets: ["latin"], variable: "--font-display", weight: "400", display: "swap" });
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const display = Instrument_Serif({ subsets: ["latin"], variable: "--font-display", weight: "400", display: "swap" });
 
 const searchProducts: SearchProduct[] = products.map((product) => ({
   id: product.id,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#ff5f3d" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#2d2b27" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const structuredData = {
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${sans.variable} ${display.variable}`} data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <Header searchProducts={searchProducts} />

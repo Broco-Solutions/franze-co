@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 
 const source = await readFile(new URL("../src/data/products.ts", import.meta.url), "utf8");
 
@@ -19,7 +19,7 @@ const numberField = (block, field) => {
   return match[1] === "null" ? null : Number(match[1]);
 };
 
-export const sourceProducts = productBlocks.map((block) => {
+export const sourceProducts = await Promise.all(productBlocks.map(async (block) => {
   const imageBlock = block.match(/imageSourceUrls: \[([\s\S]*?)\]/)?.[1] ?? "";
   const imageSourceUrls = [...imageBlock.matchAll(/"(https:\/\/[^\"]+)"/g)].map((match) => match[1]);
   const slug = stringField(block, "slug");
@@ -33,8 +33,9 @@ export const sourceProducts = productBlocks.map((block) => {
     compareAtPrice: numberField(block, "compareAtPrice"),
     sourceUrl: `https://modani.com/products/${slug}`,
     imageSourceUrls,
-    localAssetPaths: imageSourceUrls.map(
-      (_, index) => `/products/${slug}/${String(index + 1).padStart(2, "0")}.webp`,
-    ),
+    localAssetPaths: (await readdir(new URL(`../public/products/${slug}/`, import.meta.url)))
+      .filter((file) => file.endsWith(".webp"))
+      .sort()
+      .map((file) => `/products/${slug}/${file}`),
   };
-});
+}));

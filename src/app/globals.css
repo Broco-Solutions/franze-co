@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f1ece4;
-  --paper-deep: #d8d0c4;
-  --white: #faf8f4;
-  --ink: #292623;
-  --ink-soft: #716a62;
-  --line: #c8bfb2;
-  --stone: #827b70;
-  --sage: #3f4c3e;
-  --wood: #742c36;
-  --sun: #b48a55;
-  --pool: #c7c5b5;
+  --paper: #f4f0e9;
+  --paper-deep: #dfd6c8;
+  --white: #fdfbf7;
+  --ink: #2d2b27;
+  --ink-soft: #706b62;
+  --line: #d1c8ba;
+  --stone: #857d70;
+  --sage: #465047;
+  --wood: #704d3b;
+  --sun: #b99a6f;
+  --pool: #d8d1c4;
   --header-height: 70px;
 }
 
@@ -23,7 +23,7 @@ button, input, select { color: inherit; font: inherit; }
 button, select { cursor: pointer; }
 img { display: block; }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2 { font-family: var(--font-sans), Arial, sans-serif; font-weight: 500; letter-spacing: -.065em; line-height: .9; }
+h1, h2 { font-family: var(--font-display), Georgia, serif; font-weight: 400; letter-spacing: -.045em; line-height: .93; }
 h1 em, h2 em { font-weight: 400; }
 ::selection { background: var(--sage); color: white; }
 
@@ -179,6 +179,9 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 .collection-hero-copy h1 { margin-bottom: 25px; font-size: clamp(58px, 5.5vw, 82px); }
 .collection-hero-copy h1 span { display: block; }
 .collection-hero-copy > p:last-child { width: min(100%, 500px); margin-bottom: 0; color: var(--ink-soft); }
+.category-types { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 28px; }
+.category-types a { padding: 7px 10px; border: 1px solid var(--line); font-size: 9px; font-weight: 700; line-height: 1.2; text-transform: uppercase; transition: background .2s, color .2s; }
+.category-types a:hover, .category-types a:focus-visible { background: var(--ink); color: var(--white); outline-offset: 2px; }
 .collection-hero-image { position: relative; min-height: 480px; overflow: hidden; }
 .collection-hero-image img { object-fit: cover; }
 .collection-nav { position: sticky; z-index: 35; top: var(--header-height); height: 52px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(252,251,248,.96); backdrop-filter: blur(14px); }
@@ -256,6 +259,8 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 .finish-dot { width: 9px; height: 9px; display: inline-block; margin-right: 8px; border: 1px solid #aaa69d; border-radius: 50%; background: #d8d0c1; }
 .product-note { margin-top: 17px; color: var(--ink-soft); font-size: 9px; }
 .related { border-top: 1px solid var(--line); }
+.complete-room { margin-top: 108px; padding-top: 78px; border-top: 1px solid var(--line); }
+.related-note { margin: 0; color: var(--ink-soft); }
 
 .studio-hero { height: min(780px, calc(88svh - 30px)); min-height: 600px; position: relative; display: flex; align-items: flex-end; overflow: hidden; color: white; }
 .studio-hero > img { object-position: center; }
