@@ -763,6 +763,23 @@ dialog::backdrop { background: rgba(20,20,17,.45); backdrop-filter: blur(3px); }
 .fc-visit h2 { max-width: 880px; margin: 18px 0 25px; font-size: clamp(54px, 8vw, 124px); }
 .fc-visit > p:not(.fc-label) { margin-bottom: 35px; color: rgba(255,255,255,.72); }
 .fc-visit .fc-arrow-button { color: var(--sun); }
+
+/* Franze is deliberately graphic and direct: a counterpoint to Nuvola's soft,
+   gallery-like editorial system. Serif is reserved for product storytelling. */
+.fc-hero-card h1,
+.fc-manifest h1,
+.fc-spotlight-copy h2,
+.fc-products h2,
+.fc-visit h2,
+.fc-room-copy h2 {
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -.075em;
+  line-height: .92;
+}
+.fc-hero-card { border-left: 5px solid var(--wood); }
+.fc-manifest { border-top: 1px solid rgba(45,43,39,.32); border-bottom: 1px solid rgba(45,43,39,.32); }
+.fc-products { border-top: 1px solid rgba(45,43,39,.28); }
 @media (max-width: 850px) { .fc-ticker span:nth-child(2) { display: none; } .fc-header { grid-template-columns: auto 1fr auto; } .fc-header nav { display: none; } .fc-header .mobile-only { display: block; } .fc-logo { justify-self: center; } .fc-manifest { grid-template-columns: 1fr; gap: 28px; padding-block: 80px; } .fc-manifest div { max-width: 440px; } .fc-room { min-height: 330px; } .fc-spotlight { grid-template-columns: 1fr; } .fc-spotlight-photo { min-height: 480px; } .fc-products header { grid-template-columns: 1fr; } .fc-products header > a { justify-self: start; } }
 @media (max-width: 600px) { .fc-ticker { padding-inline: 13px; font-size: 8px; } .fc-header { height: 63px; padding-inline: 14px; gap: 10px; } .fc-search span { display: none; } .fc-logo { font-size: 18px; } .fc-hero { min-height: 680px; } .fc-hero-photo { inset: 0; opacity: .68; } .fc-hero-title { top: 13%; left: 20px; font-size: 21vw; } .fc-hero-caption { right: 15px; bottom: 16px; } .fc-hero-stamp { top: 16px; right: 15px; } .fc-hero-intro { bottom: 20px; left: 20px; } .fc-manifest { padding: 67px 20px; } .fc-room-index { padding: 14px 14px 55px; } .fc-room-grid { grid-template-columns: 1fr; } .fc-room { min-height: 280px; border-right: 0; } .fc-room-copy h2 { font-size: 42px; } .fc-spotlight-copy { padding: 62px 22px; } .fc-spotlight-photo { min-height: 360px; } .fc-products { padding-block: 70px; } .fc-products header { padding: 0 20px 30px; } .fc-product { flex-basis: 76vw; min-width: 0; } .fc-visit { padding: 74px 22px; } }
 
