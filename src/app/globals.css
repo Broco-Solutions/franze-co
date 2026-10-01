@@ -956,8 +956,8 @@ html[data-header-compact="true"] { --header-height: 48px; }
 .footer-hours .opening-hours.compact dt, .footer-hours .opening-hours.compact dd { font-size: 8px; }
 .footer-bottom { min-height: 42px; padding-block: 9px; }
 
-/* Keep the collection controls visible without letting them dominate the viewport. */
-.catalog-tools { top: calc(var(--header-height) + 48px); }
+/* Keep the collection controls flush beneath the compact sticky header. */
+.catalog-tools { top: var(--header-height); }
 .catalog-bar { min-height: 54px; gap: 9px; }
 .catalog-search { height: 36px; }
 .filter-toggle { min-width: 108px; height: 36px; }
@@ -969,7 +969,7 @@ html[data-header-compact="true"] { --header-height: 48px; }
   .footer-signoff h2 { font-size: 40px; }
   .footer-index { padding-block: 27px; }
   .footer-bottom { padding-block: 9px; }
-  .catalog-tools { top: calc(var(--header-height) + 46px); }
+  .catalog-tools { top: var(--header-height); }
   .catalog-bar { padding-block: 7px; }
 .catalog-search, .filter-toggle { height: 36px; }
   .catalog-bar .select-label { height: 36px; }
