@@ -3,7 +3,6 @@ import { DM_Sans, Instrument_Serif } from "next/font/google";
 import { Footer } from "@/components/footer";
 import type { SearchProduct } from "@/components/global-search";
 import { Header } from "@/components/header";
-import { PersistentVisit } from "@/components/persistent-visit";
 import { ScrollMotion } from "@/components/scroll-motion";
 import { siteConfig } from "@/config/site";
 import { products } from "@/data/products";
@@ -69,7 +68,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#main-content">Skip to content</a>
         <Header searchProducts={searchProducts} />
         <main id="main-content">{children}</main>
-        <PersistentVisit />
         <Footer />
         <ScrollMotion />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
