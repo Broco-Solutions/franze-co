@@ -981,3 +981,211 @@ html[data-header-compact="true"] { --header-height: 48px; }
 .catalog-tabs button[aria-selected="true"] { border-color: var(--ink); color: var(--ink); }
 .catalog-bar > select { height: 35px; padding: 0 8px; border: 1px solid var(--line); border-radius: 0; background: transparent; font-size: 10px; }
 @media (max-width: 800px) { .catalog-bar { grid-template-columns: 1fr auto; } .catalog-tabs { grid-column: 1 / -1; overflow-x: auto; } }
+
+/* 2026-10-01: Franze route system — asymmetric editorial layouts, not template heroes. */
+.franze-kicker { margin: 0; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.franze-cta { width: max-content; display: inline-flex; align-items: center; min-height: 42px; padding: 0 17px; border: 1px solid var(--ink); background: var(--ink); color: var(--white); font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; transition: background .2s, color .2s; }
+.franze-cta:hover { background: transparent; color: var(--ink); }
+.franze-cta-light { border-color: var(--white); background: var(--white); color: var(--ink); }
+.franze-cta-light:hover { background: transparent; color: var(--white); }
+
+.franze-home-intro { min-height: calc(100svh - 96px); display: grid; grid-template-columns: minmax(0, 43%) minmax(360px, 57%); grid-template-rows: 1fr auto; background: #d8d1c4; }
+.franze-home-copy { align-self: center; padding: clamp(68px, 10vw, 155px) clamp(32px, 7vw, 126px); }
+.franze-home-copy .franze-kicker { margin-bottom: 38px; color: var(--wood); }
+.franze-home-copy h1 { margin: 0 0 29px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(54px, 6.5vw, 109px); font-weight: 650; letter-spacing: -.09em; line-height: .82; }
+.franze-home-copy h1 em, .franze-catalog-title h1 em { font-family: var(--font-display), Georgia, serif; font-weight: 400; letter-spacing: -.045em; }
+.franze-home-lede { max-width: 360px; margin-bottom: 31px; color: #554e45; font-size: 15px; line-height: 1.55; }
+.franze-home-image { position: relative; grid-row: span 2; min-height: 660px; overflow: hidden; }
+.franze-home-image img { object-fit: cover; }
+.franze-home-image::after { content: ""; position: absolute; inset: 20px; border: 1px solid rgba(255,255,255,.58); pointer-events: none; }
+.franze-home-image p { position: absolute; z-index: 1; right: 28px; bottom: 25px; margin: 0; padding: 9px 7px; background: rgba(20,18,15,.8); color: white; font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; writing-mode: vertical-rl; }
+.franze-home-note { display: flex; gap: 20px; align-items: flex-end; margin: 0; padding: 26px clamp(32px, 7vw, 126px); border-top: 1px solid rgba(45,43,39,.28); }
+.franze-home-note span { font-family: var(--font-display), Georgia, serif; font-size: 26px; line-height: 1; }
+.franze-home-note p { max-width: 210px; margin: 0; font-size: 11px; line-height: 1.35; }
+.franze-home-principles { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: var(--paper); }
+.franze-home-principles p { min-height: 70px; display: grid; place-items: center; margin: 0; border-right: 1px solid var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.franze-home-principles p:last-child { border-right: 0; }
+.franze-home-statement { display: grid; grid-template-columns: .55fr 1.45fr .75fr; gap: 58px; padding-block: 130px; }
+.franze-home-statement .franze-kicker { color: var(--wood); }
+.franze-home-statement h2 { max-width: 720px; margin: 0; font-size: clamp(48px, 5vw, 79px); line-height: .93; }
+.franze-home-statement > p:last-child { align-self: end; max-width: 310px; margin: 0; color: var(--ink-soft); }
+.franze-room-directory { padding: 24px 24px 105px; background: #efe9df; }
+.franze-directory-heading { display: flex; justify-content: space-between; padding: 0 0 14px; border-bottom: 1px solid var(--ink); }
+.franze-directory-heading > p:last-child { margin: 0; font-size: 10px; font-weight: 800; letter-spacing: .06em; }
+.franze-directory-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.franze-directory-card { position: relative; min-height: 540px; overflow: hidden; border-right: 1px solid var(--ink); color: white; }
+.franze-directory-card:last-child { border-right: 0; }
+.franze-directory-card img { object-fit: cover; transition: transform .6s ease; }
+.franze-directory-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(22,20,18,.78), transparent 62%); }
+.franze-directory-card:hover img { transform: scale(1.045); }
+.franze-directory-card > div { position: absolute; z-index: 1; right: 14px; bottom: 14px; left: 14px; padding: 15px 14px; background: rgba(20,18,15,.76); }
+.franze-directory-card span { font-size: 10px; font-weight: 800; }
+.franze-directory-card h3 { margin: 52px 0 8px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(31px, 3.3vw, 52px); letter-spacing: -.08em; line-height: .86; }
+.franze-directory-card p { margin: 0; font-size: 11px; line-height: 1.4; }
+.franze-product-edit { padding-block: 112px; background: #2a251f; color: var(--paper); }
+.franze-edit-intro { display: grid; grid-template-columns: .7fr 1.3fr auto; gap: 35px; align-items: end; padding-bottom: 48px; }
+.franze-edit-intro .franze-kicker { color: var(--sun); }
+.franze-edit-intro h2 { margin: 0; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(48px, 5vw, 78px); font-weight: 650; letter-spacing: -.085em; line-height: .84; }
+.franze-edit-intro h2 em { font-family: var(--font-display), Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+.franze-edit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 16px; }
+.franze-product-edit .product-image { aspect-ratio: .94; background: #d7cfc2; }
+.franze-product-edit .product-meta p { color: rgba(255,255,255,.54); }
+.franze-product-edit .product-meta h3, .franze-product-edit .price { color: var(--paper); }
+.product-arrow { width: max-content; height: auto; right: 12px; bottom: 12px; padding: 7px 9px; background: var(--ink); color: var(--white); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.franze-product-edit .product-arrow { background: var(--sun); color: var(--ink); }
+.franze-material-note { min-height: 640px; display: grid; grid-template-columns: 43% 57%; background: #c36345; color: #251f19; }
+.franze-material-photo { position: relative; min-height: 640px; background: #e7ddcf; overflow: hidden; }
+.franze-material-photo img { object-fit: contain; padding: 8%; }
+.franze-material-copy { align-self: center; max-width: 680px; padding: 80px clamp(42px, 9vw, 150px); color: #000; }
+.franze-material-copy .franze-kicker, .franze-material-copy > p:not(.franze-kicker), .franze-material-copy a { color: #000; }
+.franze-material-copy .franze-kicker { margin-bottom: 20px; }
+.franze-material-copy h2 { margin: 0 0 28px; font-size: clamp(48px, 5.5vw, 83px); line-height: .9; }
+.franze-material-copy > p:not(.franze-kicker) { max-width: 360px; margin-bottom: 31px; }
+.franze-material-copy a { border-bottom: 1px solid; padding-bottom: 5px; font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.franze-home-visit { padding-block: 132px; }
+.franze-home-visit .franze-kicker { margin-bottom: 28px; color: var(--wood); }
+.franze-home-visit h2 { max-width: 850px; margin: 0 0 35px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(53px, 7vw, 111px); font-weight: 650; letter-spacing: -.095em; line-height: .82; }
+
+.franze-catalog-masthead { min-height: 560px; display: grid; grid-template-columns: 14% 1fr 31%; gap: 40px; align-items: end; padding-block: 70px; }
+.franze-catalog-serial { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; padding: 3px 0; border-right: 1px solid var(--line); font-size: 10px; font-weight: 800; letter-spacing: .06em; }
+.franze-catalog-serial span:last-child { writing-mode: vertical-rl; }
+.franze-catalog-title h1, .franze-collections-intro h1, .franze-studio-intro h1, .franze-about-intro h1, .franze-category-masthead h1 { margin: 18px 0 26px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(57px, 7vw, 112px); font-weight: 650; letter-spacing: -.095em; line-height: .82; }
+.franze-catalog-title > p:last-child { max-width: 390px; margin: 0; color: var(--ink-soft); }
+.franze-catalog-image { position: relative; min-height: 400px; overflow: hidden; }
+.franze-catalog-image img { object-fit: cover; }
+.franze-collections-intro { position: relative; min-height: 530px; display: grid; align-content: end; grid-template-columns: .55fr 1.45fr .7fr; gap: 40px; padding-bottom: 80px; }
+.franze-collections-intro h1 { grid-column: 2; margin: 0; }
+.franze-collections-intro > p:nth-child(3) { grid-column: 3; align-self: end; max-width: 270px; margin: 0; color: var(--ink-soft); }
+.franze-collections-intro > span { position: absolute; top: 60px; right: 0; color: var(--wood); font-family: var(--font-display), Georgia, serif; font-size: 24px; }
+.franze-collections-list { margin-bottom: 130px; border-top: 1px solid var(--ink); }
+.franze-collection-entry { min-height: 310px; display: grid; grid-template-columns: 12% 1fr 38%; gap: 24px; align-items: center; border-bottom: 1px solid var(--line); }
+.franze-collection-entry > span { align-self: start; padding-top: 25px; font-size: 10px; font-weight: 800; }
+.franze-collection-entry-copy p { margin: 0 0 26px; color: var(--ink-soft); font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.franze-collection-entry h2 { margin: 0 0 32px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(45px, 5vw, 75px); font-weight: 650; letter-spacing: -.085em; line-height: .84; }
+.franze-collection-entry em { border-bottom: 1px solid; padding-bottom: 4px; font-family: var(--font-display), Georgia, serif; font-size: 13px; font-style: normal; }
+.franze-collection-entry-image { position: relative; align-self: stretch; min-height: 280px; }
+.franze-collection-entry-image img { object-fit: cover; }
+.franze-studio-intro { min-height: 650px; display: grid; grid-template-columns: 1fr 39%; gap: 50px; align-items: end; padding-block: 85px; }
+.franze-studio-intro > div:first-child { align-self: center; }
+.franze-studio-intro h1 { margin-bottom: 0; }
+.franze-studio-image { position: relative; grid-column: 2; grid-row: 1 / span 2; min-height: 500px; overflow: hidden; }
+.franze-studio-image img { object-fit: cover; }
+.franze-studio-intro > p:last-child { max-width: 380px; margin: 0; color: var(--ink-soft); font-size: 15px; }
+.franze-studio-process { padding-block: 105px; border-top: 1px solid var(--ink); }
+.franze-studio-process > div { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 40px; border-top: 1px solid var(--line); }
+.franze-studio-process article { min-height: 300px; padding: 26px; border-right: 1px solid var(--line); }
+.franze-studio-process article:last-child { border-right: 0; }
+.franze-studio-process span, .franze-about-values article span { font-size: 10px; font-weight: 800; letter-spacing: .05em; }
+.franze-studio-process h2 { margin: 104px 0 12px; font-size: 44px; }
+.franze-studio-process p { max-width: 250px; margin: 0; color: var(--ink-soft); }
+.franze-appointment { padding-block: 110px; background: #465047; color: var(--white); }
+.franze-appointment > div { display: grid; grid-template-columns: 1.3fr .7fr; gap: 90px; }
+.franze-appointment .franze-kicker { color: var(--sun); }
+.franze-appointment h2 { margin: 18px 0 32px; font-size: clamp(51px, 6vw, 89px); line-height: .88; }
+.franze-appointment .opening-hours { border-color: rgba(255,255,255,.34); }
+.franze-appointment .opening-hours > div { border-color: rgba(255,255,255,.24); }
+.franze-about-intro { min-height: 650px; display: grid; grid-template-columns: 54% 46%; background: #465047; color: var(--white); }
+.franze-about-intro .shell { align-self: center; width: min(calc(100% - 64px), 780px); margin-right: clamp(32px, 6vw, 120px); }
+.franze-about-intro .franze-kicker { color: var(--sun); }
+.franze-about-intro h1 { margin-bottom: 26px; }
+.franze-about-intro h1 em { font-family: var(--font-display), Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+.franze-about-intro p:last-child { max-width: 410px; margin: 0; color: rgba(255,255,255,.75); font-size: 15px; }
+.franze-about-image { position: relative; min-height: 650px; overflow: hidden; }
+.franze-about-image img { object-fit: cover; }
+.franze-about-values { padding-block: 120px; }
+.franze-about-values > div { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 34px; border-top: 1px solid var(--ink); }
+.franze-about-values article { min-height: 330px; padding: 25px; border-right: 1px solid var(--ink); }
+.franze-about-values article:last-child { border-right: 0; }
+.franze-about-values h2 { margin: 106px 0 12px; font-family: var(--font-sans), Arial, sans-serif; font-size: 30px; font-weight: 650; letter-spacing: -.06em; }
+.franze-about-values p { max-width: 290px; margin: 0; color: var(--ink-soft); }
+.franze-about-outro { display: flex; justify-content: space-between; align-items: end; padding-block: 110px; border-top: 1px solid var(--ink); }
+.franze-about-outro h2 { margin: 0; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(56px, 7vw, 104px); font-weight: 650; letter-spacing: -.095em; line-height: .8; }
+.franze-category-masthead { min-height: 465px; display: grid; grid-template-columns: .75fr 1.2fr .85fr; gap: 38px; align-items: end; padding-block: 70px; }
+.franze-category-masthead > .franze-kicker { align-self: start; padding-top: 8px; color: var(--wood); }
+.franze-category-masthead h1 { margin: 0 0 16px; }
+.franze-category-masthead > div > p { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: 24px; line-height: 1.08; }
+.franze-category-photo { position: relative; min-height: 325px; overflow: hidden; }
+.franze-category-photo img { object-fit: cover; }
+.franze-category-description { margin: 0; color: var(--ink-soft); }
+
+@media (max-width: 850px) { .franze-home-intro { grid-template-columns: 1fr; grid-template-rows: auto auto auto; } .franze-home-copy { padding-block: 78px; } .franze-home-image { grid-row: auto; min-height: 520px; } .franze-home-note { padding-inline: clamp(32px, 7vw, 126px); } .franze-home-statement, .franze-collections-intro { grid-template-columns: 1fr; gap: 25px; padding-block: 80px; } .franze-home-statement > p:last-child, .franze-collections-intro > p:nth-child(3), .franze-collections-intro h1 { grid-column: auto; } .franze-directory-grid { grid-template-columns: repeat(2, 1fr); } .franze-directory-card:nth-child(2) { border-right: 0; } .franze-directory-card { min-height: 420px; border-bottom: 1px solid var(--ink); } .franze-edit-intro, .franze-catalog-masthead { grid-template-columns: 1fr; } .franze-edit-intro { gap: 24px; } .franze-catalog-masthead { min-height: 0; padding-block: 65px; } .franze-catalog-serial { min-height: 34px; flex-direction: row; border-right: 0; border-bottom: 1px solid var(--line); } .franze-catalog-serial span:last-child { writing-mode: initial; } .franze-catalog-image { min-height: 360px; } .franze-collection-entry { grid-template-columns: 10% 1fr 34%; } .franze-studio-intro { grid-template-columns: 1fr 42%; } .franze-appointment > div { gap: 50px; } }
+@media (max-width: 620px) { .franze-home-copy { padding: 66px 22px; } .franze-home-copy h1 { font-size: 59px; } .franze-home-note { padding: 20px 22px; } .franze-home-image { min-height: 430px; } .franze-home-principles { grid-template-columns: 1fr; } .franze-home-principles p { min-height: 48px; border-right: 0; border-bottom: 1px solid var(--ink); } .franze-home-principles p:last-child { border-bottom: 0; } .franze-home-statement { padding-block: 75px; } .franze-home-statement h2 { font-size: 48px; } .franze-room-directory { padding: 16px 14px 65px; } .franze-directory-heading { display: block; } .franze-directory-heading > p:last-child { margin-top: 7px; } .franze-directory-grid, .franze-edit-grid { grid-template-columns: 1fr; } .franze-directory-card { min-height: 410px; border-right: 0; } .franze-product-edit { padding-block: 72px; } .franze-edit-grid { gap: 34px; } .franze-edit-grid .product-card:nth-child(n+4) { display: none; } .franze-material-note { grid-template-columns: 1fr; } .franze-material-photo { min-height: 390px; } .franze-material-copy { padding: 65px 22px; } .franze-home-visit { padding-block: 78px; } .franze-home-visit h2 { font-size: 55px; } .franze-collections-intro { min-height: 420px; } .franze-collections-intro h1 { font-size: 56px; } .franze-collections-intro > span { top: 38px; } .franze-collections-list { margin-bottom: 75px; } .franze-collection-entry { grid-template-columns: 1fr; gap: 13px; padding: 22px 0; } .franze-collection-entry > span { padding: 0; } .franze-collection-entry h2 { margin-bottom: 18px; } .franze-collection-entry-image { min-height: 270px; } .franze-studio-intro { min-height: 0; grid-template-columns: 1fr; gap: 30px; padding-block: 65px; } .franze-studio-image { grid-column: auto; grid-row: auto; min-height: 400px; } .franze-studio-intro h1, .franze-category-masthead h1 { font-size: 56px; } .franze-studio-process { padding-block: 70px; } .franze-studio-process > div, .franze-appointment > div, .franze-about-intro { grid-template-columns: 1fr; } .franze-studio-process article { min-height: 215px; border-right: 0; border-bottom: 1px solid var(--line); } .franze-studio-process h2 { margin-top: 54px; } .franze-appointment { padding-block: 74px; } .franze-appointment > div { gap: 60px; } .franze-about-intro .shell { width: calc(100% - 44px); margin: 0 auto; padding-block: 74px; } .franze-about-image { min-height: 430px; } .franze-about-values { padding-block: 75px; } .franze-about-values > div { grid-template-columns: 1fr; } .franze-about-values article { min-height: 245px; border-right: 0; border-bottom: 1px solid var(--ink); } .franze-about-values h2 { margin-top: 62px; } .franze-about-outro { display: grid; gap: 34px; padding-block: 75px; } .franze-category-masthead { min-height: 0; grid-template-columns: 1fr; gap: 26px; padding-block: 60px; } .franze-category-masthead > .franze-kicker { padding: 0; } .franze-category-photo { min-height: 330px; } }
+
+.site-footer .footer-column h3, .site-footer .footer-column a, .site-footer .footer-column address, .site-footer .footer-index-brand p, .site-footer .footer-bottom, .site-footer .broco-credit { color: rgba(255,255,255,.82); }
+
+/* Homepage sequence: Franze's catalogue, room edits and studio in the Poltrona Frau-inspired editorial order. */
+.fc-header { grid-template-columns: 1fr auto 1fr; }
+.fc-header nav { display: none; }
+.fc-menu { display: inline-flex; align-items: center; gap: 9px; justify-self: start; padding: 0; font-family: var(--font-display), Georgia, serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.franze-pf-hero { position: relative; min-height: min(790px, calc(100svh - 96px)); display: grid; place-items: center; overflow: hidden; background: var(--ink); color: var(--white); }
+.franze-pf-hero > img { object-fit: cover; object-position: center; }
+.franze-pf-hero-shade { position: absolute; inset: 0; background: rgba(15,13,11,.28); }
+.franze-pf-hero-copy { position: relative; z-index: 1; display: grid; justify-items: center; padding: 70px 30px; text-align: center; }
+.franze-pf-hero-copy > p, .franze-pf-hero-copy > span { margin: 0; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.franze-pf-hero-copy > p { margin-bottom: 25px; }
+.franze-pf-hero h1 { margin: 0 0 25px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(62px, 9.5vw, 152px); font-weight: 400; letter-spacing: -.085em; line-height: .78; }
+.franze-pf-hero h1 em { font-family: var(--font-display), Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+.franze-pf-hero-copy > span { max-width: 380px; line-height: 1.45; }
+.franze-pf-hero-copy a { margin-top: 28px; border-bottom: 1px solid currentColor; padding-bottom: 6px; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.franze-pf-featured { padding-block: 102px 110px; overflow: hidden; background: var(--paper); }
+.franze-pf-section-head { display: flex; justify-content: space-between; align-items: end; gap: 36px; margin-bottom: 44px; }
+.franze-pf-section-head > div > p, .franze-pf-story-copy > p, .franze-pf-studio p { margin: 0 0 16px; color: var(--wood); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.franze-pf-section-head h2 { margin: 0; font-size: clamp(45px, 4.7vw, 70px); line-height: .9; }
+.franze-pf-section-head > a { border-bottom: 1px solid; padding-bottom: 5px; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.franze-pf-product-rail { width: max-content; display: flex; gap: 18px; padding-left: max(32px, calc((100vw - 1440px) / 2)); }
+.franze-pf-product-rail .product-card { width: min(350px, calc(100vw - 66px)); }
+.franze-pf-product-rail .product-image { aspect-ratio: .93; }
+.franze-pf-lines { padding-block: 105px 125px; }
+.franze-pf-lines .franze-pf-section-head { align-items: end; }
+.franze-pf-lines .franze-pf-section-head h2 { font-family: var(--font-sans), Arial, sans-serif; font-weight: 550; letter-spacing: -.075em; }
+.franze-pf-intro { max-width: 330px; margin: 0; color: var(--ink-soft); }
+.franze-pf-lines-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.franze-pf-lines-grid > a > div { position: relative; aspect-ratio: .85; overflow: hidden; background: var(--paper-deep); }
+.franze-pf-lines-grid img { object-fit: cover; transition: transform .5s ease; }
+.franze-pf-lines-grid a:hover img { transform: scale(1.035); }
+.franze-pf-lines-grid h3 { margin: 16px 0 4px; font-family: var(--font-sans), Arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -.04em; }
+.franze-pf-lines-grid p { margin: 0; color: var(--ink-soft); font-family: var(--font-display), Georgia, serif; font-size: 14px; }
+.franze-pf-story { position: relative; min-height: 715px; display: grid; place-items: center; overflow: hidden; color: var(--white); }
+.franze-pf-story-image { position: absolute; inset: 0; }
+.franze-pf-story-image img { object-fit: cover; }
+.franze-pf-story::after { content: ""; position: absolute; inset: 0; background: rgba(20,18,15,.42); }
+.franze-pf-story-copy { position: relative; z-index: 1; display: grid; justify-items: center; max-width: 760px; padding: 60px 28px; text-align: center; }
+.franze-pf-story-copy > p { color: var(--white); }
+.franze-pf-story h2 { margin: 0 0 28px; font-size: clamp(55px, 7vw, 110px); line-height: .84; }
+.franze-pf-story-copy > span { max-width: 445px; font-size: 15px; line-height: 1.55; }
+.franze-pf-story-copy a { margin-top: 28px; border-bottom: 1px solid; padding-bottom: 6px; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.franze-pf-studio { padding-block: 125px; background: #2a251f; color: var(--white); }
+.franze-pf-studio .shell { display: grid; grid-template-columns: .55fr 1.45fr .8fr; gap: 40px; align-items: end; }
+.franze-pf-studio p { grid-column: 1; margin: 0; color: var(--sun); }
+.franze-pf-studio h2 { grid-column: 2; margin: 0; font-size: clamp(51px, 6vw, 92px); line-height: .84; }
+.franze-pf-studio > .shell > span { grid-column: 3; align-self: center; color: rgba(255,255,255,.74); }
+.franze-pf-studio a { grid-column: 3; width: max-content; border-bottom: 1px solid var(--sun); padding-bottom: 6px; color: var(--sun); font-size: 10px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+@media (max-width: 800px) { .franze-pf-lines-grid { display: flex; gap: 14px; overflow-x: auto; margin-right: calc(-1 * max(22px, (100vw - 1040px) / 2)); padding-right: 22px; scrollbar-width: none; } .franze-pf-lines-grid > a { flex: 0 0 42vw; min-width: 210px; } .franze-pf-studio .shell { grid-template-columns: 1fr 1fr; } .franze-pf-studio p { grid-column: 1; } .franze-pf-studio h2 { grid-column: 1 / -1; } .franze-pf-studio > .shell > span, .franze-pf-studio a { grid-column: 2; } }
+@media (max-width: 620px) { .fc-menu span { display: none; } .franze-pf-hero { min-height: calc(100svh - 84px); } .franze-pf-hero h1 { font-size: 66px; } .franze-pf-featured, .franze-pf-lines { padding-block: 72px; } .franze-pf-section-head { display: grid; gap: 20px; margin-bottom: 31px; } .franze-pf-section-head h2 { font-size: 47px; } .franze-pf-product-rail { padding-left: 22px; } .franze-pf-product-rail .product-card { width: calc(100vw - 74px); } .franze-pf-lines-grid > a { flex-basis: 76vw; } .franze-pf-story { min-height: 600px; } .franze-pf-story h2 { font-size: 62px; } .franze-pf-studio { padding-block: 78px; } .franze-pf-studio .shell { grid-template-columns: 1fr; gap: 26px; } .franze-pf-studio p, .franze-pf-studio h2, .franze-pf-studio > .shell > span, .franze-pf-studio a { grid-column: 1; } }
+
+/* Franze catalogue tiles and studio hours are standalone components, not shared template primitives. */
+.catalog-tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 58px 18px; }
+.catalog-tile { min-width: 0; }
+.catalog-tile-image { position: relative; display: block; aspect-ratio: .96; overflow: hidden; background: #e4ddd3; }
+.catalog-tile-image img { object-fit: cover; transition: transform .55s ease; }
+.catalog-tile-image:hover img { transform: scale(1.035); }
+.catalog-tile-image span { position: absolute; right: 10px; bottom: 10px; padding: 7px 9px; background: var(--ink); color: var(--white); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; opacity: 0; transform: translateY(7px); transition: opacity .2s, transform .2s; }
+.catalog-tile-image:hover span, .catalog-tile-image:focus-visible span { opacity: 1; transform: translateY(0); }
+.catalog-tile-details { display: flex; justify-content: space-between; gap: 16px; padding-top: 14px; }
+.catalog-tile-details p { margin: 0 0 4px; color: var(--ink-soft); font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.catalog-tile-details h3 { margin: 0; font-size: 14px; font-weight: 650; line-height: 1.4; }
+.catalog-tile-details h3 a:hover { border-bottom: 1px solid currentColor; }
+.catalog-tile-details strong { padding-top: 16px; font-size: 13px; font-weight: 500; white-space: nowrap; }
+.franze-pf-product-rail .catalog-tile { width: min(350px, calc(100vw - 66px)); }
+.franze-pf-product-rail .catalog-tile-image { aspect-ratio: .93; }
+.franze-hours { display: grid; gap: 0; margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.franze-hours li { display: grid; grid-template-columns: 1fr auto; gap: 18px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 11px; }
+.franze-hours li span:last-child { color: var(--ink-soft); text-align: right; }
+.franze-appointment .franze-hours { border-color: rgba(255,255,255,.34); }
+.franze-appointment .franze-hours li { border-color: rgba(255,255,255,.24); }
+.franze-appointment .franze-hours li span:last-child { color: rgba(255,255,255,.72); }
+.footer-hours .franze-hours { width: 100%; border-color: rgba(255,255,255,.2); }
+.footer-hours .franze-hours li { padding-block: 4px; border: 0; color: rgba(255,255,255,.82); font-family: var(--font-display), Georgia, serif; font-size: 9px; }
+.footer-hours .franze-hours li span:last-child { color: rgba(255,255,255,.7); }
+@media (max-width: 800px) { .catalog-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .franze-pf-product-rail .catalog-tile { width: calc(100vw - 74px); } .catalog-tile-grid { grid-template-columns: 1fr; gap: 34px; } .catalog-tile-image span { opacity: 1; transform: none; } }

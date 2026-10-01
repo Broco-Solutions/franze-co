@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { categories, getProductsByCategory } from "@/data/products";
+
 export const metadata: Metadata = { title: "Furniture Collections", description: "Explore Franze collections for living, dining, bedroom, and outdoor spaces.", alternates: { canonical: "/collections" } };
 const imagery = { Living: "/editorial/living-hero.webp", Dining: "/editorial/dining-hero.webp", Bedroom: "/editorial/bedroom-hero.webp", Outdoor: "/editorial/outdoor-hero.webp" };
-export default function CollectionsPage() { return <><header className="page-hero"><Image src="/editorial/collections-hero.webp" alt="Franze room-to-room furniture collection" fill priority sizes="100vw" unoptimized /><div className="page-hero-shade" /><div className="page-hero-content shell"><p className="fc-label">SHOP BY ROOM</p><h1>Make space for<br /><em>the good things.</em></h1><p>Four collections, each built around how a room feels when it is genuinely lived in.</p></div></header><main className="project-index shell"><div className="collection-index">{categories.map((category,index) => <Link href={`/collections/${category.toLowerCase()}`} className="collection-index-row" key={category}><div className="collection-index-image"><Image src={imagery[category]} alt={`${category} furniture collection`} fill priority sizes="(max-width: 760px) 100vw, 54vw" unoptimized /></div><div className="collection-index-copy"><span>0{index+1}</span><p>{getProductsByCategory(category).length} pieces</p><h2>{category}</h2><span className="text-link">Explore <ArrowUpRight size={16} /></span></div></Link>)}</div></main></>; }
+
+export default function CollectionsPage() {
+  return <>
+    <header className="franze-collections-intro shell"><p className="franze-kicker">FRANZE / ROOM INDEX</p><h1>Four rooms.<br /><em>Four starting points.</em></h1><p>Each edit begins with the atmosphere a room needs to hold, then follows its function.</p><span>01—04</span></header>
+    <main className="franze-collections-list shell">{categories.map((category, index) => <Link href={`/collections/${category.toLowerCase()}`} className="franze-collection-entry" key={category}><span>0{index + 1}</span><div className="franze-collection-entry-copy"><p>{getProductsByCategory(category).length} pieces / room edit</p><h2>{category}</h2><em>Open collection</em></div><div className="franze-collection-entry-image"><Image src={imagery[category]} alt={`${category} furniture collection`} fill priority sizes="(max-width: 760px) 100vw, 38vw" unoptimized /></div></Link>)}</main>
+  </>;
+}
