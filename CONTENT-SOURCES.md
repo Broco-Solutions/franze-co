@@ -11,14 +11,14 @@ This is a commercial concept prototype. Every product photo and product datum be
 
 The following concept images were generated for Franze & Co. section headers on 2026-10-01. They are architectural editorial scenes, not product photography, and are never attached to a purchasable product record:
 
-- `/editorial/living-hero.png` — Living collection
-- `/editorial/dining-hero.png` — Dining collection
-- `/editorial/bedroom-hero.png` — Bedroom collection
-- `/editorial/outdoor-hero.png` — Outdoor collection
-- `/editorial/shop-hero.png` — Shop
-- `/editorial/collections-hero.png` — Collections overview
-- `/editorial/studio-hero.png` — Studio
-- `/editorial/about-hero.png` — About
+- `/editorial/living-hero.webp` — Living collection
+- `/editorial/dining-hero.webp` — Dining collection
+- `/editorial/bedroom-hero.webp` — Bedroom collection
+- `/editorial/outdoor-hero.webp` — Outdoor collection
+- `/editorial/shop-hero.webp` — Shop
+- `/editorial/collections-hero.webp` — Collections overview
+- `/editorial/studio-hero.webp` — Studio
+- `/editorial/about-hero.webp` — About
 
 ## Dawson Sofa with Ottoman
 
