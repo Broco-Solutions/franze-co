@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: siteConfig.businessName,
     url: "/",
-    images: [{ url: "/editorial/blue-room.jpg", width: 1500, height: 1500 }],
   },
   twitter: { card: "summary_large_image", title: "Franze & Co.", description: siteConfig.description },
   icons: {

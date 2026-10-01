@@ -1,49 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { categories, getProductsByCategory } from "@/data/products";
+import { ArrowUpRight } from "lucide-react";
+import { categories } from "@/data/products";
 
-export const metadata: Metadata = {
-  title: "Furniture Collections",
-  description: "Explore Franze & Co. furniture collections for contemporary living, dining, bedroom, and outdoor spaces in Miami.",
-  alternates: { canonical: "/collections" },
-  openGraph: {
-    title: "Furniture Collections",
-    description: "Explore Franze & Co. furniture collections for contemporary living, dining, bedroom, and outdoor spaces in Miami.",
-    url: "/collections",
-    images: ["/editorial/blue-room.jpg"],
-  },
-};
+export const metadata: Metadata = { title: "Furniture Project Index", description: "Explore Franze & Co. sourcing pathways for residential, hospitality, and outdoor projects.", alternates: { canonical: "/collections" } };
 
-const media = {
-  Living: "/editorial/green-salon.jpg",
-  Dining: "/editorial/dining-warm.jpg",
-  Bedroom: "/editorial/lounge-wide.jpg",
-  Outdoor: "/editorial/miami-living.jpg",
-};
+const notes = ["Homes made for everyday use.", "Public-facing spaces with a point of view.", "Open-air rooms shaped by climate."];
 
 export default function CollectionsPage() {
-  return (
-    <>
-      <header className="collections-index-hero shell" data-reveal>
-        <p className="eyebrow">THE HOUSE, INDEXED</p>
-        <h1>Start with<br /><em>the moment.</em></h1>
-        <p>Four focused edits for how a room is actually used, from first coffee to the last guest leaving.</p>
-      </header>
-      <section className="collection-index">
-        {categories.map((category, index) => (
-          <Link href={`/collections/${category.toLowerCase()}`} className="collection-index-row" key={category} data-reveal>
-            <div className="collection-index-image"><Image src={media[category]} alt={`${category} collection`} fill sizes="(max-width: 760px) 100vw, 54vw" /></div>
-            <div className="collection-index-copy">
-              <span>0{index + 1}</span>
-              <p>{getProductsByCategory(category).length} pieces</p>
-              <h2>{category}</h2>
-              <span className="text-link">Explore collection <ArrowRight size={16} /></span>
-            </div>
-          </Link>
-        ))}
-      </section>
-    </>
-  );
+  return <main className="project-index shell">
+    <header data-reveal><p className="fc-label">PROJECT INDEX</p><h1>Different spaces<br /><em>ask different things.</em></h1><p>Choose the context, then build the brief together.</p></header>
+    <div className="project-index-list">{categories.map((category, index) => <Link href={`/collections/${category.toLowerCase()}`} key={category} data-reveal><span>0{index + 1}</span><div><h2>{category}</h2><p>{notes[index]}</p></div><ArrowUpRight size={22} /></Link>)}</div>
+  </main>;
 }

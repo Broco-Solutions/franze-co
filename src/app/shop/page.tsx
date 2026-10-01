@@ -1,35 +1,20 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { CollectionNav } from "@/components/collection-nav";
-import { ShopCatalog } from "@/components/shop-catalog";
-import { products, toCatalogProduct } from "@/data/products";
+import { CatalogIntake } from "@/components/catalog-intake";
 
 export const metadata: Metadata = {
-  title: "Shop Furniture Miami",
-  description: "Browse contemporary living, dining, bedroom, and outdoor furniture by room and product type at Franze & Co. in Miami.",
+  title: "Private Furniture Sourcing",
+  description: "Franze & Co. creates room-specific furniture edits from documented, authorized sources.",
   alternates: { canonical: "/shop" },
-  openGraph: {
-    title: "Shop Furniture Miami",
-    description: "Browse contemporary living, dining, bedroom, and outdoor furniture by room and product type at Franze & Co. in Miami.",
-    url: "/shop",
-    images: ["/editorial/green-salon.jpg"],
-  },
 };
 
 export default function ShopPage() {
-  return (
-    <>
-      <header className="shop-hero" data-reveal>
-        <Image src="/editorial/warm-living.jpg" alt="Warm contemporary living room" fill priority sizes="100vw" />
-        <div className="shop-hero-shade" />
-        <div className="shop-hero-content shell">
-          <p className="eyebrow">THE COLLECTION / {products.length} PIECES</p>
-          <h1>Furniture with<br />a sense of place.</h1>
-          <p>Designed for the pace, light, and texture of a Miami home.</p>
-        </div>
-      </header>
-      <CollectionNav />
-      <ShopCatalog initialProducts={products.map(toCatalogProduct)} />
-    </>
-  );
+  return <>
+    <header className="shop-intro shell" data-reveal>
+      <p className="fc-label">FRANZE / PRIVATE SOURCING</p>
+      <div><span className="shop-intro-number">01</span><h1>Start with<br /><em>your room.</em></h1></div>
+      <p>We are deliberately not publishing a generic product grid while our catalog is rebuilt from traceable, authorized records.</p>
+    </header>
+    <section className="shop-principles"><div className="shell"><p>MEASURED / MATERIAL-LED / VERIFIED</p><span aria-hidden="true">F&amp;CO</span></div></section>
+    <CatalogIntake />
+  </>;
 }

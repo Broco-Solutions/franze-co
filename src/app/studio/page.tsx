@@ -1,66 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { OpeningHours } from "@/components/opening-hours";
-
-export const metadata: Metadata = {
-  title: "Furniture Studio Miami",
-  description: "Visit Franze & Co., a Miami furniture studio for sculptural indoor and outdoor pieces.",
-  alternates: { canonical: "/studio" },
-  openGraph: {
-    title: "Furniture Studio Miami",
-    description: "Visit Franze & Co., a Miami furniture studio for sculptural indoor and outdoor pieces.",
-    url: "/studio",
-    images: ["/editorial/green-salon.jpg"],
-  },
-};
-
-export default function StudioPage() {
-  return (
-    <>
-      <section className="studio-hero">
-        <Image src="/editorial/green-salon.jpg" alt="Colorful contemporary living setting" fill priority sizes="100vw" />
-        <div className="hero-shade" />
-        <div className="studio-hero-copy shell">
-          <p className="eyebrow light-text">OUR STUDIO / MIAMI</p>
-          <h1>Design is best<br /><em>experienced.</em></h1>
-        </div>
-      </section>
-
-      <section className="studio-invitation shell">
-        <div data-reveal><p className="eyebrow">VISIT FRANZE & CO.</p><h2>A closer look<br />changes everything.</h2></div>
-        <div data-reveal>
-          <p>Online images introduce a piece. Material, finish, and true scale become clearer when considered in person.</p>
-          <p>Book time with the Miami studio to explore the Franze edit and plan a contemporary interior with confidence.</p>
-        </div>
-      </section>
-
-      <section className="studio-collage shell">
-        <div className="studio-collage-main" data-reveal><Image src="/editorial/warm-living.jpg" alt="Warm living room setting" fill sizes="(max-width: 800px) 100vw, 62vw" /></div>
-        <div className="studio-collage-side" data-reveal><Image src="/editorial/bath-stone.jpg" alt="Calm stone interior" fill sizes="(max-width: 800px) 100vw, 38vw" /></div>
-        <p className="studio-collage-note">Explore scale, upholstery, finish, and proportion in person.</p>
-      </section>
-
-      <section className="visit-band">
-        <div className="visit-grid shell">
-          <div data-reveal>
-            <p className="eyebrow">MIAMI, FLORIDA</p>
-            <h2>Come spend time<br /><em>with the collection.</em></h2>
-            <p className="visit-location">Miami, Florida<br />Appointments by request.</p>
-          </div>
-          <div className="visit-hours" data-reveal>
-            <p className="eyebrow">OPENING HOURS</p>
-            <OpeningHours />
-          </div>
-        </div>
-      </section>
-
-      <section className="studio-next shell" data-reveal>
-        <p className="eyebrow">EXPLORE BEFORE YOU VISIT</p>
-        <h2>Start with the complete edit.</h2>
-        <Link className="text-link" href="/shop">Shop all 24 pieces <ArrowRight size={16} /></Link>
-      </section>
-    </>
-  );
-}
+export const metadata: Metadata = { title: "Studio Visits", description: "Plan a Franze & Co. project conversation in Miami.", alternates: { canonical: "/studio" } };
+export default function StudioPage() { return <><section className="studio-graphic shell"><p className="fc-label">FRANZE STUDIO / MIAMI</p><h1>Come with<br /><em>a room in mind.</em></h1><p>Bring dimensions, references, and the questions that do not fit in a product filter.</p></section><section className="studio-method shell"><div><span>01</span><h2>Look</h2><p>Talk through the light, architecture, and daily use of the space.</p></div><div><span>02</span><h2>Handle</h2><p>Compare materials and finishes with their real-world context in view.</p></div><div><span>03</span><h2>Decide</h2><p>Leave with a practical next step and a documented shortlist.</p></div></section><section className="visit-band"><div className="visit-grid shell"><div><p className="fc-label">APPOINTMENTS</p><h2>Made for a<br /><em>slower decision.</em></h2><p>Miami, Florida<br />By request.</p></div><div className="visit-hours"><p className="fc-label">OPENING HOURS</p><OpeningHours /></div></div></section><section className="studio-next shell"><p className="fc-label">NEXT</p><h2>Build the brief.</h2><Link className="text-link" href="/contact">Contact Franze <ArrowRight size={16} /></Link></section></>; }

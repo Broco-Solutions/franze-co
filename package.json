@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "audit:images": "node scripts/audit-product-images.mjs",
-    "sources:generate": "node scripts/generate-content-sources.mjs"
+    "audit:nuvola-overlap": "node scripts/audit-nuvola-overlap.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
