@@ -956,7 +956,13 @@ html[data-header-compact="true"] { --header-height: 48px; }
   .footer-bottom { padding-block: 9px; }
   .catalog-tools { top: calc(var(--header-height) + 46px); }
   .catalog-bar { padding-block: 7px; }
-  .catalog-search, .filter-toggle { height: 36px; }
+.catalog-search, .filter-toggle { height: 36px; }
   .catalog-bar .select-label { height: 36px; }
   .select-label select { height: 34px; }
 }
+
+.catalog-tabs { display: flex; gap: 16px; align-items: center; }
+.catalog-tabs button { padding: 6px 0; border: 0; border-bottom: 1px solid transparent; background: transparent; color: var(--ink-soft); font-size: 9px; font-weight: 700; text-transform: uppercase; }
+.catalog-tabs button[aria-selected="true"] { border-color: var(--ink); color: var(--ink); }
+.catalog-bar > select { height: 35px; padding: 0 8px; border: 1px solid var(--line); border-radius: 0; background: transparent; font-size: 10px; }
+@media (max-width: 800px) { .catalog-bar { grid-template-columns: 1fr auto; } .catalog-tabs { grid-column: 1 / -1; overflow-x: auto; } }

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { GlobalSearch, type SearchProduct } from "@/components/global-search";
 
-const navigation = [{ label: "Sourcing", href: "/shop" }, { label: "Projects", href: "/collections" }, { label: "Studio", href: "/studio" }, { label: "About", href: "/about" }];
+const navigation = [{ label: "Shop", href: "/shop" }, { label: "Collections", href: "/collections" }, { label: "Studio", href: "/studio" }, { label: "About", href: "/about" }];
 
 export function Header({ searchProducts }: { searchProducts: SearchProduct[] }) {
   const pathname = usePathname();

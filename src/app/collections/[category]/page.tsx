@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { CatalogIntake } from "@/components/catalog-intake";
-import { categories, type Category } from "@/data/products";
-
-const context: Record<Category, { title: string; copy: string; cues: string[] }> = {
-  Residential: { title: "A home is a sequence of rituals.", copy: "We start with the daily moments that need to work: arrival, rest, gathering, and the things that stay visible.", cues: ["Room dimensions", "Material preferences", "Timing and delivery"] },
-  Hospitality: { title: "Atmosphere needs operational clarity.", copy: "For guest-facing spaces, furniture must hold a strong point of view while meeting the practical requirements of the room.", cues: ["Use intensity", "Specification needs", "Project milestones"] },
-  Outdoor: { title: "Outside has its own rules.", copy: "Light, weather, drainage, and maintenance shape every decision before a silhouette ever enters the conversation.", cues: ["Exposure and shade", "Climate resilience", "Seasonal use"] },
-};
-const getCategory = (slug: string) => categories.find((item) => item.toLowerCase() === slug);
+import { ShopCatalog } from "@/components/shop-catalog";
+import { categories, getProductsByCategory, toCatalogProduct, type Category } from "@/data/products";
+const content: Record<Category, { title: string; description: string; image: string }> = { Living: { title: "Rooms made to linger.", description: "Low seating, sculptural chairs, and mineral tables for the hours that stretch easily.", image: "/products/mori-performance-fabric-chaise-sectional-sofa/01.png" }, Dining: { title: "Gather around good design.", description: "Tables and chairs with enough presence for an everyday dinner and a full house.", image: "/products/sloane-travertine-dining-table/01.png" }, Bedroom: { title: "A softer kind of architecture.", description: "Grounded beds and quiet storage for an end-of-day reset.", image: "/products/dawson-bed/01.png" }, Outdoor: { title: "Outside, considered.", description: "Weather-ready pieces for terraces, gardens, and late light.", image: "/products/eden-outdoor-sofa/01.png" } };
+const getCategory = (slug: string) => categories.find((category) => category.toLowerCase() === slug);
 export function generateStaticParams() { return categories.map((category) => ({ category: category.toLowerCase() })); }
-export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> { const category = getCategory((await params).category); return category ? { title: `${category} Furniture Sourcing`, description: context[category].copy, alternates: { canonical: `/collections/${category.toLowerCase()}` } } : {}; }
-export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) { const category = getCategory((await params).category); if (!category) notFound(); const details = context[category]; return <><main className="project-detail shell"><p className="fc-label">PROJECT PATH / {category.toUpperCase()}</p><h1>{details.title}</h1><p>{details.copy}</p><ul>{details.cues.map((cue, index) => <li key={cue}><span>0{index + 1}</span>{cue}</li>)}</ul></main><CatalogIntake category={category} /></>; }
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> { const category = getCategory((await params).category); return category ? { title: `${category} Furniture`, description: content[category].description } : {}; }
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) { const category = getCategory((await params).category); if (!category) notFound(); const details = content[category]; const products = getProductsByCategory(category); return <><header className="collection-hero"><div className="collection-hero-copy"><p className="eyebrow">{category.toUpperCase()} / {products.length} PIECES</p><h1>{details.title}</h1><p>{details.description}</p></div><div className="collection-hero-image"><Image src={details.image} alt={`${category} collection`} fill priority sizes="(max-width: 780px) 100vw, 50vw" /></div></header><ShopCatalog initialProducts={products.map(toCatalogProduct)} initialCategory={category} /></>; }

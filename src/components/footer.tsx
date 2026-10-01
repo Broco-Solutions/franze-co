@@ -13,7 +13,7 @@ export function Footer() {
     </div>
     <div className="footer-index shell">
       <div className="footer-index-brand"><div className="fc-logo footer-wordmark-lockup" aria-label="Franze & Co.">FRANZE<span>&amp;</span>CO.</div><p>{siteConfig.tagline}</p></div>
-      <div className="footer-column"><h3>Explore</h3><Link href="/shop">Private sourcing</Link><Link href="/collections">Project index</Link><Link href="/collections/residential">Residential</Link><Link href="/collections/outdoor">Outdoor</Link></div>
+      <div className="footer-column"><h3>Explore</h3><Link href="/shop">All furniture</Link><Link href="/collections">Collections</Link><Link href="/collections/living">Living</Link><Link href="/collections/outdoor">Outdoor</Link></div>
       <div className="footer-column"><h3>Work with us</h3><Link href="/about">Our point of view</Link><Link href="/studio">Studio appointments</Link><Link href="/contact">Contact the team</Link></div>
       <div className="footer-column footer-hours"><h3>Hours</h3><OpeningHours compact /></div>
     </div>

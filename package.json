@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "audit:images": "node scripts/audit-product-images.mjs",
+    "catalog:source": "node scripts/source-castlery-catalog.mjs",
+    "audit:catalog": "node scripts/audit-catalog.mjs",
     "audit:nuvola-overlap": "node scripts/audit-nuvola-overlap.mjs"
   },
   "dependencies": {

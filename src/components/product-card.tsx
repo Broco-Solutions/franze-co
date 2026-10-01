@@ -1,0 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { formatPrice, type CatalogProduct } from "@/data/products";
+export function ProductCard({ product, priority = false }: { product: CatalogProduct; priority?: boolean }) { return <article className="product-card"><Link className="product-image" href={`/products/${product.slug}`}><Image className="product-image-primary" src={product.images[0]} alt={product.name} fill preload={priority} sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" /><span className="product-arrow"><ArrowUpRight size={18} /></span></Link><div className="product-meta"><div><p>{product.subcategory}</p><h3><Link href={`/products/${product.slug}`}>{product.name}</Link></h3></div><div className="price"><span>{formatPrice(product.price)}</span></div></div></article>; }
