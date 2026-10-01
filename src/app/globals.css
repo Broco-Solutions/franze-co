@@ -1200,3 +1200,42 @@ html[data-header-compact="true"] { --header-height: 48px; }
 .franze-pf-product-rail .catalog-tile { flex: 0 0 min(350px, calc(100vw - 66px)); scroll-snap-align: start; }
 @media (max-width: 620px) { .franze-pf-rail-tools { margin-inline: 22px; } .franze-pf-rail-tools button { min-width: 68px; } .franze-pf-product-rail { padding-right: 22px; } .franze-pf-product-rail .catalog-tile { flex-basis: calc(100vw - 74px); } }
 @media (prefers-reduced-motion: reduce) { .franze-typing-cursor { animation: none; } .franze-pf-product-rail { scroll-behavior: auto; } }
+
+/* Product pages use an editorial gallery + product dossier, independent from the landing/catalog cards. */
+.franze-product-crumbs { min-height: 70px; display: flex; align-items: center; gap: 9px; color: var(--ink-soft); font-size: 9px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.franze-product-crumbs a:hover { color: var(--ink); }
+.franze-product-crumbs span { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.franze-product-detail { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(330px, .72fr); gap: clamp(42px, 7vw, 112px); align-items: start; padding-bottom: 128px; }
+.franze-gallery { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(180px, .75fr); grid-template-rows: minmax(330px, 39vw) minmax(230px, 25vw); gap: 12px; }
+.franze-gallery-frame { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: #e7e1d7; }
+.franze-gallery-frame-1 { grid-row: 1 / span 2; }
+.franze-gallery-frame img { object-fit: cover; transition: transform .7s cubic-bezier(.22,.61,.36,1); }
+.franze-gallery-frame-2 img { object-fit: contain; padding: 9%; }
+.franze-gallery-frame:hover img { transform: scale(1.025); }
+.franze-gallery-frame figcaption { position: absolute; right: 12px; bottom: 12px; padding: 6px 8px; background: rgba(253,251,247,.9); color: var(--ink); font-size: 8px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.franze-gallery-frame figcaption { background: #211d18; color: #fff; }
+.franze-product-info { position: sticky; top: 91px; padding-top: 18px; }
+.franze-product-kicker { display: flex; justify-content: space-between; gap: 18px; margin: 0 0 25px; color: var(--wood); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.franze-product-info h1 { max-width: 530px; margin: 0 0 19px; font-family: var(--font-sans), Arial, sans-serif; font-size: clamp(43px, 4.5vw, 72px); font-weight: 650; letter-spacing: -.09em; line-height: .86; }
+.franze-product-price { margin: 0 0 35px; font-family: var(--font-display), Georgia, serif; font-size: 27px; }
+.franze-product-copy { max-width: 470px; margin-bottom: 39px; color: var(--ink-soft); font-size: 13px; line-height: 1.65; }
+.franze-product-copy p { margin-bottom: 14px; }
+.franze-product-copy .franze-product-lede { color: var(--ink); font-family: var(--font-display), Georgia, serif; font-size: 25px; line-height: 1.18; }
+.franze-product-facts { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--ink); }
+.franze-product-facts > div { display: grid; grid-template-columns: 118px 1fr; gap: 15px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.franze-product-facts span { color: var(--ink-soft); font-size: 9px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.franze-product-facts strong { font-size: 12px; font-weight: 500; line-height: 1.5; }
+.franze-product-reference { margin: 22px 0 24px; color: var(--ink-soft); font-size: 10px; line-height: 1.55; }
+.franze-product-enquiry { display: inline-flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 7px; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.franze-product-enquiry svg, .franze-related-head > a svg { transition: transform .2s; }
+.franze-product-enquiry:hover svg, .franze-related-head > a:hover svg { transform: translateX(4px); }
+.franze-related { padding-block: 105px 125px; border-top: 1px solid var(--line); background: #e9e2d8; }
+.franze-related-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 42px; }
+.franze-related-head > div > p { margin: 0 0 14px; color: var(--wood); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.franze-related-head h2 { max-width: 650px; margin: 0; font-size: clamp(40px, 4.5vw, 67px); line-height: .9; }
+.franze-related-head > a { display: inline-flex; align-items: center; gap: 9px; border-bottom: 1px solid; padding-bottom: 6px; font-size: 10px; font-weight: 800; text-transform: uppercase; white-space: nowrap; }
+.franze-related .catalog-tile-details p { color: #4c463f; }
+.catalog-tile-marker { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; background: rgba(253,251,247,.94) !important; color: var(--ink) !important; font-family: var(--font-sans), Arial, sans-serif; font-size: 18px !important; font-weight: 400 !important; line-height: 1; text-transform: none !important; }
+.catalog-tile-image:hover .catalog-tile-marker, .catalog-tile-image:focus-visible .catalog-tile-marker { transform: rotate(45deg); }
+@media (max-width: 900px) { .franze-product-detail { grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: 35px; } .franze-gallery { grid-template-rows: minmax(290px, 42vw) minmax(200px, 28vw); } }
+@media (max-width: 700px) { .franze-product-crumbs { min-height: 58px; padding-inline: 14px; } .franze-product-detail { width: 100%; display: block; padding-bottom: 72px; } .franze-gallery { display: flex; gap: 9px; overflow-x: auto; padding: 0 14px 9px; scroll-snap-type: x mandatory; scrollbar-width: none; } .franze-gallery::-webkit-scrollbar { display: none; } .franze-gallery-frame, .franze-gallery-frame-1 { flex: 0 0 88vw; aspect-ratio: .92; scroll-snap-align: center; } .franze-product-info { position: static; padding: 50px 22px 0; } .franze-product-info h1 { font-size: 54px; } .franze-product-kicker { margin-bottom: 20px; } .franze-product-copy .franze-product-lede { font-size: 23px; } .franze-related { padding-block: 72px 84px; } .franze-related-head { display: grid; gap: 22px; margin-bottom: 31px; } .franze-related-head h2 { font-size: 47px; } }
