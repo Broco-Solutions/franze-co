@@ -15,6 +15,10 @@ The following concept images were generated for Franze & Co. section headers on 
 - `/editorial/dining-hero.png` — Dining collection
 - `/editorial/bedroom-hero.png` — Bedroom collection
 - `/editorial/outdoor-hero.png` — Outdoor collection
+- `/editorial/shop-hero.png` — Shop
+- `/editorial/collections-hero.png` — Collections overview
+- `/editorial/studio-hero.png` — Studio
+- `/editorial/about-hero.png` — About
 
 ## Dawson Sofa with Ottoman
 
