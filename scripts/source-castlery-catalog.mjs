@@ -36,26 +36,28 @@ const imageCandidates = (html, primary, productName) => {
   const primaryAsset = cloudinaryAsset(primary);
   const code = primary.match(/\/variants\/([^/]+)\//)?.[1];
   const exactStem = primaryAsset?.name.replace(/-(?:front|angle|side|back|lifestyle(?:-crop)?|det_?\d+|set_?\d+|dim(?:-us)?).*$/i, "") ?? "";
-  const productToken = productName.split(" ")[0].toLowerCase();
+  const productTerms = productName.toLowerCase().split(/[^a-z0-9]+/).filter((term) => term.length > 3 && !["with", "performance", "fabric", "couch"].includes(term));
+  const matchesTerm = (name, term) => term === "nightstand" ? /nightstand|bedside/.test(name) : name.includes(term);
+  const matchesModel = (asset) => {
+    const name = asset.name.toLowerCase();
+    return productTerms.filter((term) => matchesTerm(name, term)).length >= Math.min(2, productTerms.length);
+  };
   const urls = [...html.matchAll(/https:\/\/res\.cloudinary\.com\/castlery\/image\/(?:private|upload)\/[^"\s<>]+?\.(?:png|jpe?g)(?:\?[^"\s<>]*)?/gi)].map((match) => match[0]);
   const uniqueAssets = [...new Map(urls.map(cloudinaryAsset).filter(Boolean).map((asset) => [asset.key, asset])).values()];
   const candidates = [...new Map(uniqueAssets.map((asset) => [asset.name.replace(/\.(?:png|jpe?g)$/i, ""), asset])).values()]
     .filter((asset) => asset.key !== primaryAsset?.key && asset.name.replace(/\.(?:png|jpe?g)$/i, "") !== primaryAsset?.name.replace(/\.(?:png|jpe?g)$/i, ""))
-    // Variant IDs lock the exact purchasable configuration. Newer PIM assets do
-    // not expose that ID, so their exact filename stem is used instead.
-    .filter((asset) => code ? asset.key.includes(`/variants/${code}/`) : exactStem && asset.name.startsWith(exactStem))
-    // Product-page modules can contain room-set assets for another product in
-    // the same variant family. The named product token is a second guardrail.
-    .filter((asset) => asset.name.toLowerCase().includes(productToken))
+    // A room-set can use a different size/color option but must still name the
+    // same model with at least two meaningful product-name terms.
+    .filter(matchesModel)
     .filter((asset) => !/\b(?:dim|swatch|care|warranty)\b/i.test(asset.name));
   const score = (asset) => {
     const name = asset.name.toLowerCase();
-    if (name.includes("lifestyle")) return 0;
-    if (name.includes("-set")) return 1;
-    if (name.includes("-angle")) return 2;
-    if (name.includes("-side") || name.includes("-back")) return 3;
-    if (name.includes("-det")) return 4;
-    return 8;
+    const exactConfiguration = code ? asset.key.includes(`/variants/${code}/`) : exactStem && asset.name.startsWith(exactStem);
+    if (/lifestyle|set|campaign/i.test(name)) return exactConfiguration ? 0 : 1;
+    if (exactConfiguration && name.includes("-angle")) return 10;
+    if (exactConfiguration && (name.includes("-side") || name.includes("-back"))) return 11;
+    if (exactConfiguration && name.includes("-det")) return 12;
+    return 20;
   };
   return candidates.sort((a, b) => score(a) - score(b)).map((asset) => asset.url);
 };

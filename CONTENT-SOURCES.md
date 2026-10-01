@@ -120,13 +120,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Performance Twill, Light Grey
 - **Dimensions:** W29.1" x D30.7" x H41.9"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1745396145/crusader/variants/AS-000765-PT4002/Leon-Armchair-Performance-Twill-Pearl-Beige-Side-1745396143.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1745910602/crusader/variants/PB-001617-PT4002/Leon-Armchair-Perl-Beige-Square-Set_1-1745910599.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1745396146/crusader/variants/AS-000765-PT4002/Leon-Armchair-Performance-Twill-Pearl-Beige-Angle-1745396143.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1745396146/crusader/variants/AS-000765-PT4002/Leon-Armchair-Performance-Twill-Pearl-Beige-Back-1745396143.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1745396367/crusader/variants/PB-001617-PT4002/Leon-Armchair-Performance-Twill-Pearl-Beige-Set-Of-2-Angle-1745396365.jpg
 - **Local assets:**
-  - /products/leon-performance-fabric-armchair/01.png
+  - /products/leon-performance-fabric-armchair/01.jpg
   - /products/leon-performance-fabric-armchair/02.png
-  - /products/leon-performance-fabric-armchair/03.png
+  - /products/leon-performance-fabric-armchair/03.jpg
 
 ## Owen II Armchair
 
@@ -138,13 +138,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Basketweave, Cream
 - **Dimensions:** W35.4" x D39.2" x H31.1"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1789374062/pim/converting/1789374062524/Owen-Armchair-Basketweave-Cream-Blonde-Oak-Angle.png
+  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1787742526/pim/converting/1787742526566/Owen-Armchair-Cream-Blonde-Oak-Set_1.jpg
   - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1200/v1789374062/pim/converting/1789374062437/Owen-Armchair-Basketweave-Cream-Blonde-Oak-Front.png
-  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1789374062/pim/converting/1789374062392/Owen-Armchair-Basketweave-Cream-Blonde-Oak-Side.png
+  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1787740436/pim/converting/1787740437244/Owen-3-Seater-Sofa-With-Ottoman-With-Armchair-Cream-Blonde-Oak-Set_1.jpg
 - **Local assets:**
-  - /products/owen-ii-armchair/01.png
+  - /products/owen-ii-armchair/01.jpg
   - /products/owen-ii-armchair/02.png
-  - /products/owen-ii-armchair/03.png
+  - /products/owen-ii-armchair/03.jpg
 
 ## Albie Travertine Rectangular Coffee Table
 
@@ -228,13 +228,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** See source product page
 - **Dimensions:** W35.4" x D35.4" x H29.9"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1756175899/crusader/variants/AS-000928/Allura-Round-Dining-Table-90cm-Angle-1756175898.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1758698901/crusader/variants/AS-000930/Allura-Round-Dining-Table-120cm-With-4-Anya-Dining-Chair-Cushion-Caramel-Square-Set_1-1758698901.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1756175900/crusader/variants/AS-000928/Allura-Round-Dining-Table-90cm-Front-1756175898.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1756175899/crusader/variants/AS-000928/Allura-Round-Dining-Table-90cm-Side-1756175898.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1758698925/crusader/variants/AS-000930/Allura-Round-Dining-Table-120cm-With-4-Anya-Dining-Chair-Creamy_White-Square-Set_1-1758698912.jpg
 - **Local assets:**
-  - /products/allura-round-dining-table/01.png
+  - /products/allura-round-dining-table/01.jpg
   - /products/allura-round-dining-table/02.png
-  - /products/allura-round-dining-table/03.png
+  - /products/allura-round-dining-table/03.jpg
 
 ## Casa Dining Table
 
@@ -246,13 +246,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** See source product page
 - **Dimensions:** W70.9" x D35.4" x H29.9"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1756455069/crusader/variants/40550342/Casa-Rectangular-Dining-Table-154cm-Side-1756455067.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1692431195/crusader/variants/40550225/Casa-Rectangular-Dining-Table-Square-Set_2-1692431193.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1756455069/crusader/variants/40550342/Casa-Rectangular-Dining-Table-154cm-Angle_1-1756455067.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1756455069/crusader/variants/40550342/Casa-Rectangular-Dining-Table-154cm-Front-1756455067.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1692431196/crusader/variants/40550225/Casa-Rectangular-Dining-Table-Square-Set_1-1692431193.jpg
 - **Local assets:**
-  - /products/casa-dining-table/01.png
+  - /products/casa-dining-table/01.jpg
   - /products/casa-dining-table/02.png
-  - /products/casa-dining-table/03.png
+  - /products/casa-dining-table/03.jpg
 
 ## Forma Round Dining Table
 
@@ -266,11 +266,11 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Source image URLs:**
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1769050233/crusader/variants/AS-001037-WA/Forma-Round-Dining-Table-120cm-Walnut-With-4-Tavi-Wood-Back-Dining-Chair-Greige-Walnut-Set_3-1769050231.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1769049964/crusader/variants/AS-001037-WA/Forma-Round-Dining-Table-90cm-Walnut-Front-1769049962.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1769049964/crusader/variants/AS-001037-WA/Forma-Round-Dining-Table-90cm-Walnut-Angle-1769049962.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1769050233/crusader/variants/AS-001037-WA/Froma-Round-Dining-Table-120cm-Walnut-With-4-Lira-Dining-Chairs-Brown-Black-Set_1-1769050231.jpg
 - **Local assets:**
   - /products/forma-round-dining-table/01.jpg
   - /products/forma-round-dining-table/02.png
-  - /products/forma-round-dining-table/03.png
+  - /products/forma-round-dining-table/03.jpg
 
 ## Tavi Performance Fabric Dining Chair
 
@@ -282,9 +282,9 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Performance Multi Twill, Light Grey
 - **Dimensions:** W17.9" x D20.9" x H32.3"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1770627229/crusader/variants/54000284-PH4001/Tavi-Wood-Back-Dining-Chair-Performance-Hugo-Greige-Blonde-Oak-Det_1-1770627227.jpg
+  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1774233393/knight/USP/2026/Tavi-Wood-Back-Dining-Chair-Greige-Walnut-Dining-Room-Campaingn-Set_2.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1770005193/crusader/variants/54000284-PH4001/Tavi-Wood-Back-Dining-Chair-Performance-Hugo-Greige-Blonde-Oak-Angle-1770005191.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1770005201/crusader/variants/54000284-PH4001/Tavi-Wood-Back-Dining-Chair-Performance-Hugo-Greige-Blonde-Oak-Det_2-1770005199.jpg
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1770627229/crusader/variants/54000284-PH4001/Tavi-Wood-Back-Dining-Chair-Performance-Hugo-Greige-Blonde-Oak-Det_1-1770627227.jpg
 - **Local assets:**
   - /products/tavi-performance-fabric-dining-chair/01.jpg
   - /products/tavi-performance-fabric-dining-chair/02.png
@@ -300,13 +300,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Performance Multi Twill, Light Grey
 - **Dimensions:** W19.9" x D21.5" x H32.3"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1780039610/pim/converting/1780039607655/Lira-Dining-Chair-Performance-Hugo-Greige-Black-Side.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1754900723/crusader/variants/52460107-PH4001/Lira-Dining-Chair-Dining-Room-Campaign-Square-Set_2-1754900720.jpg
   - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1200/v1780039611/pim/converting/1780039607599/Lira-Dining-Chair-Performance-Hugo-Greige-Black-Angle.png
-  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1780039611/pim/converting/1780039607710/Lira-Dining-Chair-Performance-Hugo-Greige-Black-Back.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1754900723/crusader/variants/52460107-PH4001/Belmont-Travertine-Rectangular-Dining-Table-With-6-Lira-Dining-Chair-Dining-Room-Campaign-Square-Set_2-1754900721.jpg
 - **Local assets:**
-  - /products/lira-performance-fabric-dining-chair/01.png
+  - /products/lira-performance-fabric-dining-chair/01.jpg
   - /products/lira-performance-fabric-dining-chair/02.png
-  - /products/lira-performance-fabric-dining-chair/03.png
+  - /products/lira-performance-fabric-dining-chair/03.jpg
 
 ## Brighton Performance Fabric Dining Chair
 
@@ -320,11 +320,11 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Source image URLs:**
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1770004156/crusader/variants/54000273-PA4001/Brighton-Dining-Chair-Cream-White-Wash-Legs-Set_1-1770004154.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1770004085/crusader/variants/54000273-PA4001/Brighton-Dining-Chair-Performance-Mixed-Yarn-Chenille-Cream-White-Wash-Angle-1770004083.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1770004085/crusader/variants/54000273-PA4001/Brighton-Dining-Chair-Performance-Mixed-Yarn-Chenille-Cream-White-Wash-Side-1770004083.png
+  - https://res.cloudinary.com/castlery/image/upload/c_fit,f_auto,q_auto,w_1500/v1774002709/knight/USP/2026/Brighton-Dining-Chair-Cream-Dark-Walnut-Legs-Set_1.jpg
 - **Local assets:**
   - /products/brighton-performance-fabric-dining-chair/01.jpg
   - /products/brighton-performance-fabric-dining-chair/02.png
-  - /products/brighton-performance-fabric-dining-chair/03.png
+  - /products/brighton-performance-fabric-dining-chair/03.jpg
 
 ## Dawson Bed
 
@@ -336,13 +336,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Textured Linen Weave, Cream
 - **Dimensions:** W76.4" x D98.4" x H35"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1634544629/crusader/variants/54000057-NG4001/Dawson-Queen-Size-Bed-Beach-Linen-Angle.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1698291141/crusader/variants/54000145-NG4001/Dawson-non-storage-bed-Beach-Linen-Square-Set_1-1698291141.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1634544577/crusader/variants/54000057-NG4001/Dawson-Queen-Size-Bed-Beach-Linen-Front.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1634544597/crusader/variants/54000057-NG4001/Dawson-Queen-Size-Bed-Beach-Linen-Side.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1698291141/crusader/variants/54000145-NG4001/Dawson-non-storage-bed-Beach-Linen-Square-Set_3-1698291141.jpg
 - **Local assets:**
-  - /products/dawson-bed/01.png
+  - /products/dawson-bed/01.jpg
   - /products/dawson-bed/02.png
-  - /products/dawson-bed/03.png
+  - /products/dawson-bed/03.jpg
 
 ## Auburn Performance Bouclé Storage Bed
 
@@ -354,13 +354,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Chalk Bouclé
 - **Dimensions:** W67.5" x D91.3" x H43.9"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1740471498/crusader/variants/AS-000636-CB4001/Auburn-Queen-Storage-Bed-Performance-Cambria-Boucle-Chalk-Angle_3-1740471496.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1741599773/crusader/variants/AS-000637-CB4001/Auburn-Storage-Bed-Chalk-Square-Set_2-1741599770.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1740471499/crusader/variants/AS-000636-CB4001/Auburn-Queen-Storage-Bed-Performance-Cambria-Boucle-Chalk-Front-1740471496.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1740471499/crusader/variants/AS-000636-CB4001/Auburn-Queen-Storage-Bed-Performance-Cambria-Boucle-Chalk-Angle-1740471496.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1741599568/crusader/variants/AS-000637-CB4001/Auburn-Queen-Storage-Bed-Performance-Cambria-Bouncle-Chalk-Bedroom-Campaign-Set_12-1741599565.jpg
 - **Local assets:**
-  - /products/auburn-performance-boucle-storage-bed/01.png
+  - /products/auburn-performance-boucle-storage-bed/01.jpg
   - /products/auburn-performance-boucle-storage-bed/02.png
-  - /products/auburn-performance-boucle-storage-bed/03.png
+  - /products/auburn-performance-boucle-storage-bed/03.jpg
 
 ## Joseph Nightstand
 
@@ -426,13 +426,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** See source product page
 - **Dimensions:** W59.1" x D31.5" x H30"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752659749/crusader/variants/40670073/Isla-Outdoor-Dining-Table-180cm-Angle__-1752659747.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752659805/crusader/variants/AS-000990/Isla-Outdoor-2-Dining-Chair-With-Dining-Table-With-Dining-Bench-Square-Set_2-1752659802.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1752659750/crusader/variants/40670073/Isla-Outdoor-Dining-Table-180cm-Front__-1752659747.png
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752659749/crusader/variants/40670073/Isla-Outdoor-Dining-Table-180cm-Side__-1752659747.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752659805/crusader/variants/AS-000990/Isla-Outdoor-4-Dining-Chair-With-Dining-Table-Square-Set_1-1752659802.jpg
 - **Local assets:**
-  - /products/isla-outdoor-dining-table/01.png
+  - /products/isla-outdoor-dining-table/01.jpg
   - /products/isla-outdoor-dining-table/02.png
-  - /products/isla-outdoor-dining-table/03.png
+  - /products/isla-outdoor-dining-table/03.jpg
 
 ## Isla Outdoor Lounge Chair
 
@@ -444,11 +444,13 @@ The following concept images were generated for Franze & Co. section headers on 
 - **Materials:** Sable, Oat
 - **Dimensions:** W30.9" x D32.3" x H33.5"
 - **Source image URLs:**
-  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1766029448/crusader/variants/AS-000911-SA4001/Isla-Outdoor-Lounge-Chair-Sable-Oat-Side____-1766029446.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752661342/crusader/variants/AS-000912-SA4001/Isla-Outdoor-Lounge-Chair-Sable-Oat-Square-Set_1-1752661339.jpg
   - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1200/v1766029448/crusader/variants/AS-000911-SA4001/Isla-Outdoor-Lounge-Chair-Sable-Oat-Angle____-1766029446.png
+  - https://res.cloudinary.com/castlery/image/private/c_fit,f_auto,q_auto,w_1500/v1752660692/crusader/variants/AS-000912-SA4001/Isla-Outdoor-2-Lounge-Chair-Sable-With-Square-Side-Table_-Square-Set_2-1752660690.jpg
 - **Local assets:**
-  - /products/isla-outdoor-lounge-chair/01.png
+  - /products/isla-outdoor-lounge-chair/01.jpg
   - /products/isla-outdoor-lounge-chair/02.png
+  - /products/isla-outdoor-lounge-chair/03.jpg
 
 ## Guin Round Coffee Table
 

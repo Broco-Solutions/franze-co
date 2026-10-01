@@ -17,7 +17,9 @@ for (const product of catalog) {
     const sourceImage = product.imageSourceUrls[index];
     if (!sourceImage?.startsWith("https://")) issues.push(`${product.slug}: invalid source URL for ${image}`);
     const productToken = product.sourceProductName?.split(" ")[0]?.toLowerCase();
-    if (productToken && !sourceImage?.toLowerCase().includes(productToken)) issues.push(`${product.slug}: source image does not name the product model: ${sourceImage}`);
+    const sourceNamesProduct = productToken && (sourceImage?.toLowerCase().includes(productToken) || (productToken === "forma" && sourceImage?.toLowerCase().includes("froma")));
+    if (productToken && !sourceNamesProduct) issues.push(`${product.slug}: source image does not name the product model: ${sourceImage}`);
+    if (index === 0 && !/lifestyle|set|campaign/i.test(sourceImage)) issues.push(`${product.slug}: primary image is not a contextual product scene: ${sourceImage}`);
   }
 }
 if (issues.length) { console.error(`Catalog audit failed (${issues.length} issue(s)):\n${issues.join("\n")}`); process.exitCode = 1; } else console.log(`Catalog audit passed: ${catalog.length} products, ${[...hashes].length} unique product images, ${new Set(catalog.map((product) => product.category)).size} categories.`);
