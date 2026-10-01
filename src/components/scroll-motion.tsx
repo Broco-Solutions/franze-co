@@ -7,7 +7,6 @@ export function ScrollMotion() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const elements = [...document.querySelectorAll<HTMLElement>("[data-reveal]")];
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reducedMotion) return;
@@ -31,16 +30,33 @@ export function ScrollMotion() {
       { rootMargin: "0px 0px -8%", threshold: 0.08 },
     );
 
-    for (const element of elements) {
+    const reveal = (element: HTMLElement) => {
+      if (element.classList.contains("is-visible")) return;
       const bounds = element.getBoundingClientRect();
       if (bounds.top < window.innerHeight * 0.92) {
         element.classList.add("is-visible");
       } else {
         observer.observe(element);
       }
-    }
+    };
 
-    return () => observer.disconnect();
+    document.querySelectorAll<HTMLElement>("[data-reveal]").forEach(reveal);
+
+    const mutations = new MutationObserver((records) => {
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          if (!(node instanceof HTMLElement)) continue;
+          if (node.matches("[data-reveal]")) reveal(node);
+          node.querySelectorAll<HTMLElement>("[data-reveal]").forEach(reveal);
+        }
+      }
+    });
+    mutations.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+    }
   }, [pathname]);
 
   return null;
