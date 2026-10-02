@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { FeaturedRail } from "@/components/featured-rail";
 import { HeroTitle } from "@/components/hero-title";
 import { categories, featuredProducts, getProductsByCategory, toCatalogProduct } from "@/data/products";
@@ -16,7 +17,10 @@ export default function Home() {
     <section className="franze-pf-hero">
       <Image src="/editorial/franze-miami-hero.webp" alt="Editorial Franze Miami interior" fill priority sizes="100vw" unoptimized />
       <div className="franze-pf-hero-shade" />
-      <div className="franze-pf-hero-copy"><p>FRANZE &amp; CO. / MIAMI</p><HeroTitle /><span>CONTEMPORARY PIECES FOR WARM, ARCHITECTURAL ROOMS</span><Link href="/shop">Explore the collection</Link></div>
+      <div className="franze-pf-hero-index"><span>01</span><i /><span>04</span></div>
+      <div className="franze-pf-hero-meta"><span>COLLECTED FURNITURE</span><span>WARM / ARCHITECTURAL / MIAMI</span></div>
+      <div className="franze-pf-hero-copy"><p>FRANZE &amp; CO. / MIAMI</p><HeroTitle /><span>Contemporary pieces for warm, architectural rooms.</span><Link href="/shop">Explore the collection <ArrowUpRight size={16} strokeWidth={1.5} /></Link></div>
+      <div className="franze-pf-hero-scroll"><ArrowDownRight size={18} strokeWidth={1.4} /><span>Scroll to explore</span></div>
     </section>
 
     <section className="franze-pf-featured" data-reveal>
